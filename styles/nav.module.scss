@@ -1,0 +1,18 @@
+
+.top{
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+
+
+.logo{
+display: flex;
+gap: 0.8rem;
+
+.danger {
+        color: $color-danger;
+    }
+}

@@ -1,0 +1,38 @@
+.recent{
+    margin-top: 2rem;
+    h2{
+      margin-bottom: 0.8rem;  
+    }
+    table{
+        background: $color-white;
+        width: 100%;
+        border-radius: $card-border-radius;
+        padding: $card-padding;
+        text-align: center;
+        box-shadow: $box-shadow;
+        transition: all .3s ease;
+        &:hover{
+            box-shadow: none;
+        }
+
+        tbody {
+            td{
+            height: 2.8rem;
+            border-bottom: 1px solid $color-light;
+            color: $color-dark-variant;
+        }
+        tr {
+            &:last-child td{
+                border: none;
+            }
+        }
+    }
+    
+    }
+a {
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: $color-primary;
+}
+} 
