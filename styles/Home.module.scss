@@ -4,13 +4,43 @@
   margin: 0 auto;
   gap: 1.8rem;
   grid-template-columns: 14rem auto 23rem;
+  @media screen and (max-width: 1200px){
+    width: 94%;
+    grid-template-columns: 7rem auto 23rem;
+  }
+   @media screen and (max-width: 768px){
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 0rem;
   
+  }
 }
 .aside{
   height: 100vh;
+  @media screen and (max-width: 768px) {
+    position: fixed;
+    background: $color-white;
+    left: -100%;
+    box-shadow: 1rem 3rem 4rem $color-light;
+    height: 100vh;
+    padding-right: $card-padding;
+    display: none;
+    z-index: 99;
+    animation: slide-in .5s forwards;
+    @keyframes slide-in{
+      to{
+        left: 0;
+      }
+    }
+  }
 }
 .main{
   margin-top: 1.4rem;
+  padding: 0 1rem;
+   @media screen and (max-width: 768px) {
+      margin-top: 6rem;
+    
+    }
 
   .date{
   display: inline-block;

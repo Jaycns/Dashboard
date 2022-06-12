@@ -1,38 +1,72 @@
-.recent{
-    margin-top: 2rem;
-    h2{
-      margin-bottom: 0.8rem;  
+.recent {
+  margin-top: 2rem;
+  h2 {
+    margin-bottom: 0.8rem;
+  }
+  table {
+    background: $color-white;
+    width: 100%;
+    border-radius: $card-border-radius;
+    padding: $card-padding;
+    text-align: center;
+    box-shadow: $box-shadow;
+    transition: all 0.3s ease;
+    &:hover {
+      box-shadow: none;
     }
-    table{
-        background: $color-white;
-        width: 100%;
-        border-radius: $card-border-radius;
-        padding: $card-padding;
-        text-align: center;
-        box-shadow: $box-shadow;
-        transition: all .3s ease;
-        &:hover{
-            box-shadow: none;
-        }
 
-        tbody {
-            td{
-            height: 2.8rem;
-            border-bottom: 1px solid $color-light;
-            color: $color-dark-variant;
+    tbody {
+      td {
+        height: 2.8rem;
+        border-bottom: 1px solid $color-light;
+        color: $color-dark-variant;
+      }
+      tr {
+        &:last-child td {
+          border: none;
         }
-        tr {
-            &:last-child td{
-                border: none;
-            }
-        }
+      }
     }
-    
-    }
-a {
+  }
+  a {
     text-align: center;
     display: block;
     margin: 1rem auto;
     color: $color-primary;
+  }
+  @media screen and (max-width: 1200px) {
+    width: 95%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 20rem 0 0 8rem;
+    table {
+      width: 83vw;
+    }
+    thead tr th:last-child,
+    thead tr td:first-child {
+      display: none;
+    }
+    tbody tr th:last-child,
+    tbody tr td:first-child {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    position: relative;
+    margin: 18rem 0 0 0rem;
+    table {
+      width: 100%;
+      border-radius: 1rem;
+    }
+    thead tr th:last-child,
+    thead tr td:first-child {
+      display: none;
+    }
+    tbody tr th:last-child,
+    tbody tr td:first-child {
+      display: none;
+    }
+  }
 }
-} 

@@ -1,0 +1,71 @@
+@import "props.scss";
+.analystics {
+  margin-top: 1rem;
+  h2 {
+    margin-bottom: 0.8rem;
+  }
+  .item {
+    background: $color-white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+    padding: 1.4rem $card-padding;
+    border-radius: $border-radius-1;
+    box-shadow: $box-shadow;
+    transition: all 0.3s ease;
+    &:hover {
+      box-shadow: none;
+    }
+    .right {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 0;
+      width: 100%;
+    }
+    .icon {
+      padding: 0.5rem;
+      color: $color-white;
+      border-radius: 50%;
+      background: $color-primary;
+      display: flex;
+    }
+
+  }
+  .online {
+    .icon {
+      background: $color-primary;
+    }
+  }
+  .offline {
+    .icon {
+      background: $color-danger;
+    }
+  }
+  .customers {
+    .icon {
+      background: $color-success;
+    }
+  }
+  .add {
+      background: transparent;
+      border: 2px dashed $color-primary;
+      color: $color-primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      div{
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+      h3{
+        font-weight: 500;
+      }
+      .span{
+        font-size: 22px;
+      }
+    }
+
+}

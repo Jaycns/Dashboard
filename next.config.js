@@ -32,6 +32,8 @@ $card-padding: 1.8rem;
 $padding-1: 1.2rem;
 
 $box-shadow: 0 2rem 3rem $color-light;
+// Dark Theme variables
+
     `,
   },
 };

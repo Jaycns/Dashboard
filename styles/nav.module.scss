@@ -1,18 +1,35 @@
+@import "props.scss";
+.top {
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.4rem;
 
-.top{
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 1.4rem;
 }
+.btn{
+  font-size: 25px;
+  margin: 0;
+}
+.logo {
+  display: flex;
+  gap: 0.8rem;
 
-
-.logo{
-display: flex;
-gap: 0.8rem;
-
-.danger {
-        color: $color-danger;
+  @media screen and (max-width: 1200px) {
+    margin-left: 1rem;
+    h2 {
+      display: none;
     }
+    h3{
+        display: none;
+    }
+  }
+   @media screen and (max-width: 768px) {
+    h2 {
+      display: inline;
+    }
+    h3{
+        display: inline;
+    }
+  }
 }

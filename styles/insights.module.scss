@@ -20,7 +20,10 @@
             font-size: 2rem;
             color: $color-white;
         }
+     @media screen and (max-width: 768px) {
+      border-radius: 1rem;
     
+    }
 
     }
     .expenses {
@@ -92,5 +95,10 @@ svg{
           color: $color-info-dark;
       }
 
+@media screen and (max-width: 1200px) {
+    grid-template-columns: 1fr;
+    gap: 0;
+    
+}
 
 }

@@ -1,5 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
+
+
+.dark{
+  $color-background: #181a1e;
+  $color-white: 202528;
+  $color-dark: #edeffd;
+  $color-dark-variant: #a3bdcc;
+  $color-light: rgba(0,0,0,0.4);
+  $box-shadow: 0 2rem 3rem $color-light;
+}
 
 html {
   scroll-behavior: smooth;
@@ -10,7 +20,7 @@ body {
   height: 100vh;
   font-size: 0.88rem;
   background: $color-background;
-  overflow: hidden;
+  overflow: scroll;
   user-select: none;
 }
 
@@ -27,51 +37,33 @@ a {
   list-style: none;
   text-decoration: none;
 }
-img{
+img {
   display: block;
   width: 100%;
 }
-h1{
+h1 {
   font-weight: 800;
   font-size: 1.8rem;
 }
-h2{
+h2 {
   font-size: 1.4rem;
 }
-h3{
+h3 {
   font-size: 0.87rem;
 }
-h4{
-  font-size:0.8rem;
+h4 {
+  font-size: 0.8rem;
 }
 h5 {
   font-size: 0.77rem;
 }
-small{
+small {
   font-size: 0.75rem;
 }
-.profile {
-  width: 2.8rem;
-  height: 2.8rem;
-  border-radius: 50%;
-  overflow: hidden;
-}
-.muted{
-  color: $color-info-dark;
-}
-p{
-  color: $color-dark;
-}
-b{
-  color: $color-dark;
-}
-.primary{
-  color: $color-primary;
-}
 
-.success {
-  color: $color-success;
+p {
+  color: $color-dark;
 }
-.warning {
-  color: $color-warning;
+b {
+  color: $color-dark;
 }
