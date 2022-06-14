@@ -1,104 +1,98 @@
-.insights{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.6rem;
-    &>div{
-        background: $color-white;
-        padding: $card-padding;
-        border-radius: $card-border-radius;
-        margin-top: 1rem;
-        box-shadow: $box-shadow;
-        transition: all 0.3 ease;
-        &:hover{
-            box-shadow: none;
-
-        }
-        .span{
-            background: $color-primary;
-            padding: 0.5rem;
-            border-radius: 50%;
-            font-size: 2rem;
-            color: $color-white;
-        }
-     @media screen and (max-width: 768px) {
+@use "./props.scss" as *;
+.insights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  & > div {
+    background: $color-white;
+    padding: $card-padding;
+    border-radius: $card-border-radius;
+    margin-top: 1rem;
+    box-shadow: $box-shadow;
+    transition: all 0.3 ease;
+    &:hover {
+      box-shadow: none;
+    }
+    .span {
+      background: $color-primary;
+      padding: 0.5rem;
+      border-radius: 50%;
+      font-size: 2rem;
+      color: $color-white;
+    }
+    @media screen and (max-width: 768px) {
       border-radius: 1rem;
-    
     }
+  }
+  .expenses {
+    .span {
+      background: $color-danger;
+    }
+  }
 
+  .income {
+    .span {
+      background: $color-success;
     }
-    .expenses {
-        .span {
-            background: $color-danger;
-                    }
-                }
-        
-    .income {
-        .span {
-            background: $color-success;
-                    }
-                }
-    .middle{
-display: flex;
-align-items: center;
-justify-content: space-between;
-    }
-h3{
+  }
+  .middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h3 {
     margin: 1rem 0 0.6rem;
     font-size: 1rem;
-}
-.progress {
+  }
+  .progress {
     position: relative;
     width: 92px;
     height: 92px;
     border-radius: 50%;
     .numbers {
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-display: flex;
-justify-content: center;
-align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-}
-svg{
+  }
+  svg {
     width: 7rem;
     height: 7rem;
     circle {
-            fill: none;
-            stroke: $color-primary;
-            stroke-width: 14;
-            stroke-linecap: round;
-            transform: translate(5px, 5px);
-            stroke-dasharray: 110;
-            stroke-dashoffset: 92;
-    
-        }
-       
-}
- .sales circle {
-     stroke-dasharray: 200;
-     stroke-dashoffset: -30;
- }
- .expenses circle {
-     stroke-dasharray: 80;
-     stroke-dashoffset: 20;
- }
- .income circle {
-     stroke-dasharray: 110;
-     stroke-dashoffset: 35;
- }
-      .muted {
-            margin-top: 1.3rem;
-            display: block;
-          color: $color-info-dark;
-      }
+      fill: none;
+      stroke: $color-primary;
+      stroke-width: 14;
+      stroke-linecap: round;
+      transform: translate(5px, 5px);
+      stroke-dasharray: 110;
+      stroke-dashoffset: 92;
+    }
+  }
+  .sales circle {
+    stroke-dasharray: 200;
+    stroke-dashoffset: -30;
+  }
+  .expenses circle {
+    stroke-dasharray: 80;
+    stroke-dashoffset: 20;
+  }
+  .income circle {
+    stroke-dasharray: 110;
+    stroke-dashoffset: 35;
+  }
+  .muted {
+    margin-top: 1.3rem;
+    display: block;
+    color: $color-info-dark;
+  }
 
-@media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1200px) {
     grid-template-columns: 1fr;
     gap: 0;
-    
-}
-
+  }
 }

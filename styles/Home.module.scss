@@ -1,21 +1,31 @@
-.container{
+@use "./props.scss" as *;
+.container {
   display: grid;
   width: 96%;
   margin: 0 auto;
   gap: 1.8rem;
   grid-template-columns: 14rem auto 23rem;
-  @media screen and (max-width: 1200px){
+
+  .dark {
+    $color-background: #181a1e;
+    $color-white: #202528;
+    $color-dark: #edeffd;
+    $color-dark-variant: #a3bdcc;
+    $color-light: rgba(0, 0, 0, 0.4);
+    $box-shadow: 0 2rem 3rem $color-light;
+  }
+
+  @media screen and (max-width: 1200px) {
     width: 94%;
     grid-template-columns: 7rem auto 23rem;
   }
-   @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     width: 100%;
     grid-template-columns: 1fr;
     gap: 0rem;
-  
   }
 }
-.aside{
+.aside {
   height: 100vh;
   @media screen and (max-width: 768px) {
     position: fixed;
@@ -26,36 +36,32 @@
     padding-right: $card-padding;
     display: none;
     z-index: 99;
-    animation: slide-in .5s forwards;
-    @keyframes slide-in{
-      to{
+    animation: slide-in 0.5s forwards;
+    @keyframes slide-in {
+      to {
         left: 0;
       }
     }
   }
 }
-.main{
+.main {
   margin-top: 1.4rem;
   padding: 0 1rem;
-   @media screen and (max-width: 768px) {
-      margin-top: 6rem;
-    
-    }
-
-  .date{
-  display: inline-block;
-  background: $color-light;
-  border-radius: $border-radius-1;
-  margin: 1rem 0;
-  
-  input{
-   background: transparent;
-   border: none;
-   color: $color-dark;
-   padding: .8rem 3rem .8rem 1.2rem; 
-   
+  @media screen and (max-width: 768px) {
+    margin-top: 6rem;
   }
-}
-  
 
+  .date {
+    display: inline-block;
+    background: $color-light;
+    border-radius: $border-radius-1;
+    margin: 1rem 0;
+
+    input {
+      background: transparent;
+      border: none;
+      color: $color-dark;
+      padding: 0.8rem 3rem 0.8rem 1.2rem;
+    }
+  }
 }

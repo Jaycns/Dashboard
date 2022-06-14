@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../images/jaycn_d.png";
+import logo from "../asset/jaycn_d.png";
 import { MdClose } from "react-icons/md";
 import styles from "../styles/nav.module.scss";
 
@@ -11,7 +11,7 @@ function Nav({ handleClose }) {
           src={logo}
           width="40px"
           height="40px"
-          alt=""
+          alt="Just in"
           className={styles.img}
         />
         <h2>

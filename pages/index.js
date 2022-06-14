@@ -12,6 +12,12 @@ export default function Home() {
   const [click, setClick] = useState(false);
   const handleOpen = () => setClick(true);
   const handleClose = () => setClick(false);
+   const [theme, setTheme] = useState("light");
+   const toggleTheme = () => {
+     theme == "light"
+       ? setTheme("dark")
+       : setTheme("light");
+   };
   return (
     <div className={styles.container}>
       <Head>

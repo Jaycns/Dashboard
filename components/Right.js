@@ -3,10 +3,13 @@ import { MdMenu } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
 import Image from "next/image";
-import profile from "../images/jaycn_pics.png";
-import photo from "../images/jaycn_pics2.png";
+import profile from "../asset/jaycn_pics.png";
+import photo from "../asset/jaycn_pics2.png";
+import { useState } from 'react';
 
-function Right({ handleOpen }) {
+function Right ({ handleOpen }) {
+  const [theme, setTheme] = useState('light');
+  
   return (
     <div className={styles.right}>
       <div className={styles.top}>
@@ -20,7 +23,7 @@ function Right({ handleOpen }) {
           className={styles.toggler}
           onClick={ () =>
             document.body.classList.toggle(
-              styles.dark
+              'dark'
             )
           }
         >
@@ -42,7 +45,8 @@ function Right({ handleOpen }) {
             <Image
               width="50px"
               height="50px"
-              src={profile}
+              src={ profile }
+              alt="Here"
             />
           </div>
         </div>
@@ -55,7 +59,8 @@ function Right({ handleOpen }) {
               <Image
                 width="50px"
                 height="50px"
-                src={photo}
+                src={ photo }
+                alt="great"
               />
             </div>
             <div className={styles.message}>
@@ -74,7 +79,8 @@ function Right({ handleOpen }) {
               <Image
                 width="50px"
                 height="50px"
-                src={photo}
+                src={ photo }
+                alt="There"
               />
             </div>
             <div className={styles.message}>
@@ -93,7 +99,8 @@ function Right({ handleOpen }) {
               <Image
                 width="50px"
                 height="50px"
-                src={photo}
+                src={ photo }
+                alt="Here there"
               />
             </div>
             <div className={styles.message}>
