@@ -1,0 +1,10 @@
+@use "../props.scss" as *;
+
+.reports{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 2rem;
+    
+}

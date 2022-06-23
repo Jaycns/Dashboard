@@ -1,0 +1,46 @@
+@use "../props.scss" as *;
+
+.payment {
+  display: flex;
+  align-self: center;
+  margin-top: 2rem;
+  gap: 2rem;
+  .badges {
+    display: flex;
+    gap: 1rem;
+    align-self: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+  .badge {
+    padding: 0.5rem $card-padding;
+    border-radius: $border-radius-1;
+    background-color: $color-white;
+    display: flex;
+    align-self: center;
+    gap: 1rem;
+    transition: all 0.5s ease;
+    & > span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+    }
+     &:first-child{
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      height: fit-content;
+      font-size: 1.5rem;
+    }
+    & > div {
+      display: flex;
+      gap: 2rem;
+      align-self: center;
+    }
+    &:hover{
+        box-shadow: 0 0 1.5rem $color-primary-light;
+
+    }
+  }
+ 
+}

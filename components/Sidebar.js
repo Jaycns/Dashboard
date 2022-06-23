@@ -8,13 +8,12 @@ import { MdInventory } from "react-icons/md";
 import { MdReportGmailerrorred } from "react-icons/md";
 import { MdSettings } from "react-icons/md";
 import { MdAdd } from "react-icons/md";
+import { MdUpdate } from "react-icons/md";
 import { MdLogout } from "react-icons/md";
 import { useState } from "react";
 
-export default function SideBar() {
-  const [val, setVal] = useState("Dashboard");
-  const handleClick = (e) =>
-    setVal(e.target.getAttribute("name"));
+export default function SideBar({handleClick, val}) {
+  
   return (
     <div className={styles.sidebar}>
       <a
@@ -130,6 +129,13 @@ export default function SideBar() {
         <MdLogout className={styles.span} />
         <h3>Logout</h3>
       </a>
+      {/* <div className={ styles.updates }>
+        <MdUpdate />
+        <h4>Updates Available</h4>
+        <p>Security Updates</p>
+        <p>General Updates</p>
+        <a href="#">Update Now</a>
+      </div> */}
     </div>
   );
 }

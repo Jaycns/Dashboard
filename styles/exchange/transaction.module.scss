@@ -1,0 +1,60 @@
+@use "../props.scss" as *;
+.transactions {
+  margin-top: 2rem;
+  img {
+    width: 2.2rem;
+  }
+  p {
+    font-size: 0.7rem;
+  }
+  .transaction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem $card-padding;
+    border-radius: $card-border-radius;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    &:hover {
+      background: $color-white;
+      cursor: pointer;
+    }
+    .service {
+      display: flex;
+      gap: 1rem;
+      .icon {
+        padding: 1rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .detail {
+    display: flex;
+    gap: 0.5rem;
+    .details {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+    }
+    .card {
+      display: flex;
+      width: 4.6rem;
+      height: 3rem;
+      align-items: center;
+      justify-content: center;
+      border-radius: $border-radius-1;
+    }
+  }
+  .header {
+    display: flex;
+    margin: 1rem;
+    justify-content: space-between;
+    a {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

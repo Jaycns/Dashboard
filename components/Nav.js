@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../asset/jaycn_d.png";
+import logo from "../public/asset/jaycn_d.png";
 import { MdClose } from "react-icons/md";
 import styles from "../styles/nav.module.scss";
 
@@ -16,7 +16,7 @@ function Nav({ handleClose }) {
         />
         <h2>
           JAY
-          <span className={styles.danger}>
+          <span className={styles}>
             CN
           </span>
         </h2>

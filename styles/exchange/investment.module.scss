@@ -1,0 +1,40 @@
+@use "../props.scss" as *;
+.investments{
+  background: $color-white;
+  border-radius: $card-border-radius; 
+  margin-top: 6rem; 
+  img{
+    width: 2.4rem;
+  }
+  p{
+    font-size: .7rem;
+  }
+  .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $card-padding;
+    padding-bottom: 0;
+    a{
+        display: flex;
+        align-items: center;
+        color: $color-primary;
+    }
+  }
+  .investment{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $card-padding;
+    border-bottom: 1px solid $color-light;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    &:last-child{
+        border: none;
+    }
+    &:hover{
+        background: $color-light;
+    }
+  }
+}

@@ -6,18 +6,32 @@ import Insights from "../components/Insights";
 import Recent from "../components/Recent";
 import Right from "../components/Right";
 import Analystics from "../components/Analystics";
-import React, { useState } from "react";
+import Top from "../components/Top";
+import React, {
+  useState,
+  useEffect,
+} from "react";
+import Exchange from "../exchange/Exchange";
+import MonthlyReports from "../exchange/reports";
+import FastPayment from "../exchange/fastPayment";
+import Canvas from "../exchange/canvas";
+import Investment from "../exchange/investment";
+import Transaction from "../exchange/transactions";
 
 export default function Home() {
   const [click, setClick] = useState(false);
   const handleOpen = () => setClick(true);
   const handleClose = () => setClick(false);
-   const [theme, setTheme] = useState("light");
-   const toggleTheme = () => {
-     theme == "light"
-       ? setTheme("dark")
-       : setTheme("light");
-   };
+  const [theme, setTheme] = useState("light");
+  const toggleTheme = () => {
+    theme == "light"
+      ? setTheme("dark")
+      : setTheme("light");
+  };
+  const [val, setVal] = useState("Dashboard");
+  const handleClick = (e) =>
+    setVal(e.target.getAttribute("name"));
+
   return (
     <div className={styles.container}>
       <Head>
@@ -30,25 +44,64 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <aside className={styles.aside} style={{display: click? 'block': ''}}>
+      <Top
+        handleOpen={handleOpen}
+        click={click}
+      />
+      <aside
+        className={styles.aside}
+        style={{ display: click ? "block" : "" }}
+      >
         <Nav handleClose={handleClose} />
-        <SideBar click={click} />
+        <SideBar
+          click={click}
+          val={val}
+          handleClick={handleClick}
+        />
       </aside>
       <main className={styles.main}>
         <h1>Dashboard</h1>
         <div className={styles.date}>
           <input type="date" />
         </div>
-        <Insights />
-        <Recent />
+        {/* <Insights /> */}
+        {val === "Analystics" || "Dashboard" ? (
+          <Exchange />
+        ) : (
+          ""
+        )}
+        {val === "Analystics" || "Dashboard" ? (
+          <MonthlyReports />
+        ) : (
+          ""
+        )}
+        {val === "Analystics" || "Dashboard" ? (
+          <FastPayment />
+        ) : (
+          ""
+        )}
+        {val === "Analystics" || "Dashboard" ? (
+          <Canvas />
+        ) : (
+          ""
+        )}
+        {val === "Analystics" || "Orders" ? (
+          <Recent />
+        ) : (
+          ""
+        )}
+
+        {/* <Recent /> */}
       </main>
       <div className="">
-        <Right
+        {/* <Right
           handleOpen={handleOpen}
-          click={click}
-        />
-        <Analystics />
+          click={ click }
+          
+        /> */}
+        <Investment />
+        <Transaction />
+        {/* <Analystics /> */}
       </div>
       {/* <footer className={styles.footer}>
         <a

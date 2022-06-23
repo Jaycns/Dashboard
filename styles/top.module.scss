@@ -1,0 +1,60 @@
+@use "./props.scss" as *;
+
+.top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  padding: 0 0.8rem;
+  height: 4.6rem;
+  background: $color-white;
+  width: 100%;
+  margin: 0;
+  z-index: 2;
+  box-shadow: 0 1rem 1rem $color-light;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  .toggler {
+    width: 4.4rem;
+    position: absolute;
+    left: 60%;
+    background: $color-light;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+    width: 4.5rem;
+    cursor: pointer;
+    border-radius: $border-radius-1;
+    .span {
+      font-size: 1.2rem;
+      width: 50%;
+      height: 100%;
+      padding: 0.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .span.active {
+      background: $color-primary;
+      color: #fff;
+      border-radius: $border-radius-1;
+    }
+  }
+  button {
+    display: inline-block;
+    background: transparent;
+    cursor: pointer;
+    color: $color-dark;
+    position: absolute;
+    left: 1rem;
+    font-size: 2rem;
+    .span {
+      font-size: 2rem;
+    }
+  }
+}
+.profile .info {
+  display: none;
+}

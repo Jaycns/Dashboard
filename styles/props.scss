@@ -1,5 +1,8 @@
 $color-primary: #7380ec;
+$color-primary-light: #9ea6f0;
 $color-danger: rgb(205, 207, 73);
+$color-danger-1: red;
+$color-danger-light: rgba(209, 134, 124, 0.2);
 $color-success: #41f1b6;
 $color-warning: #ffbb55;
 $color-white: #fff;
@@ -10,8 +13,11 @@ $color-light: rgba(132, 139, 200, 0.18);
 $color-primary-variant: #111e88;
 $color-dark-variant: #677483;
 $color-background: #f6f6f9;
+$color-purple-light: #27282f;
+$color-purple: #6f3094;
 
 $card-border-radius: 3rem;
+$card-border-radius-1: 1.5rem;
 $border-radius-1: 0.4rem;
 $border-radius-2: 0.8rem;
 $border-radius-3: 1.2rem;
@@ -20,26 +26,49 @@ $card-padding: 1.8rem;
 $padding-1: 1.2rem;
 
 $box-shadow: 0 2rem 3rem $color-light;
-.dark{
+
 $color-background: #181a1e;
 $color-white: #202528;
 $color-dark: #edeffd;
 $color-dark-variant: #a3bdcc;
 $color-light: rgba(0, 0, 0, 0.4);
 $box-shadow: 0 2rem 3rem $color-light;
-}
+
 .primary {
   color: $color-primary;
 }
-
+.primaryB {
+  background: $color-primary;
+}
+.primaryBf {
+  background: rgba($color-primary, 0.3);
+}
 .success {
   color: $color-success;
+}
+.successB {
+  background: rgba($color-success, 0.3);
 }
 .warning {
   color: $color-warning;
 }
+.warningB {
+  background: $color-warning;
+}
 .danger {
-  color: $color-danger;
+  color: $color-danger-1;
+}
+.dangerB {
+  background: $color-danger-1;
+}
+.dangerA {
+  background: rgba(180, 30, 30, 0.3);
+}
+.purple {
+  background: rgba($color-purple, 0.3);
+}
+.purpleB {
+  background: $color-purple-light;
 }
 .profile {
   // width: 2.8rem;

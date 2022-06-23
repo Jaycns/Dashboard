@@ -1,19 +1,19 @@
 @use "./props.scss" as *;
 .container {
-  display: grid;
-  width: 96%;
+  display: flex;
   margin: 0 auto;
   gap: 1.8rem;
-  grid-template-columns: 14rem auto 23rem;
 
-  .dark {
-    $color-background: #181a1e;
-    $color-white: #202528;
-    $color-dark: #edeffd;
-    $color-dark-variant: #a3bdcc;
-    $color-light: rgba(0, 0, 0, 0.4);
-    $box-shadow: 0 2rem 3rem $color-light;
-  }
+  
+
+  // .dark {
+  //   $color-background: #181a1e;
+  //   $color-white: #202528;
+  //   $color-dark: #edeffd;
+  //   $color-dark-variant: #a3bdcc;
+  //   $color-light: rgba(0, 0, 0, 0.4);
+  //   $box-shadow: 0 2rem 3rem $color-light;
+  // }
 
   @media screen and (max-width: 1200px) {
     width: 94%;
@@ -27,6 +27,7 @@
 }
 .aside {
   height: 100vh;
+  position: fixed;
   @media screen and (max-width: 768px) {
     position: fixed;
     background: $color-white;
@@ -45,11 +46,18 @@
   }
 }
 .main {
-  margin-top: 1.4rem;
+  margin-top: 6rem;
   padding: 0 1rem;
+  margin-left: 15rem;
+  @media screen and (max-width: 1200px) {
+    margin-top: 6rem;
+    margin-left: 7rem;
+  }
   @media screen and (max-width: 768px) {
     margin-top: 6rem;
+    margin-left: 0rem;
   }
+  
 
   .date {
     display: inline-block;
