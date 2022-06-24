@@ -15,10 +15,25 @@
   display: flex;
   justify-content: flex-end;
   gap: 2rem;
+  .search {
+    background: $color-light;
+    padding: $padding-1 $card-padding;
+    width: 32vw;
+    border-radius: $border-radius-1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: $color-dark;
+    position: absolute;
+    left: 15%;
+    font-size: 1rem;
+    @media screen and (max-width: 768px) {
+      left: 30%;
+      width: 18rem;
+    }
+  }
   .toggler {
     width: 4.4rem;
-    position: absolute;
-    left: 60%;
     background: $color-light;
     display: flex;
     justify-content: space-between;
@@ -43,7 +58,7 @@
     }
   }
   button {
-    display: inline-block;
+    display: none;
     background: transparent;
     cursor: pointer;
     color: $color-dark;

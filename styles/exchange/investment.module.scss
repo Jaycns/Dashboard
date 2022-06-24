@@ -1,27 +1,27 @@
 @use "../props.scss" as *;
-.investments{
+.investments {
   background: $color-white;
-  border-radius: $card-border-radius; 
-  margin-top: 6rem; 
-  img{
+  border-radius: $card-border-radius;
+  margin-top: 6rem;
+  img {
     width: 2.4rem;
   }
-  p{
-    font-size: .7rem;
+  p {
+    font-size: 0.7rem;
   }
-  .header{
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: $card-padding;
     padding-bottom: 0;
-    a{
-        display: flex;
-        align-items: center;
-        color: $color-primary;
+    a {
+      display: flex;
+      align-items: center;
+      color: $color-primary;
     }
   }
-  .investment{
+  .investment {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,11 +30,14 @@
     gap: 1rem;
     transition: all 0.3s ease;
     cursor: pointer;
-    &:last-child{
-        border: none;
+    &:last-child {
+      border: none;
+      &:hover {
+        border-radius: 0 0 $card-border-radius  $card-border-radius ;
+      }
     }
-    &:hover{
-        background: $color-light;
+    &:hover {
+      background: $color-light;
     }
   }
 }

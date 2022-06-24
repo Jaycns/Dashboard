@@ -23,40 +23,40 @@ function Recent() {
 
                   </tr>
                    <tr>
-                      <td>Foldable Mini Drone</td>
-                      <td>85631</td>
+                      <td>Iphone 11 pro Max</td>
+                      <td>74901</td>
+                      <td>Complete</td>
+                      <td className={styles.warning}>Delivered</td>
+                      <td className={ styles.primary}>Details</td>
+
+                  </tr>
+                   <tr>
+                      <td>Hisense Air fryer</td>
+                      <td>71632</td>
                       <td>Due</td>
                       <td className={styles.warning}>Pending</td>
                       <td className={ styles.primary}>Details</td>
 
                   </tr>
                    <tr>
-                      <td>Foldable Mini Drone</td>
-                      <td>85631</td>
+                      <td>Siemens Solar Inverter</td>
+                      <td>32431</td>
                       <td>Due</td>
                       <td className={styles.warning}>Pending</td>
                       <td className={ styles.primary}>Details</td>
 
                   </tr>
                    <tr>
-                      <td>Foldable Mini Drone</td>
+                      <td>Samsung galaxy S22</td>
                       <td>85631</td>
-                      <td>Due</td>
-                      <td className={styles.warning}>Pending</td>
+                      <td>Pre-order</td>
+                      <td className={styles.warning}>Delivered</td>
                       <td className={ styles.primary}>Details</td>
 
                   </tr>
                    <tr>
-                      <td>Foldable Mini Drone</td>
-                      <td>85631</td>
-                      <td>Due</td>
-                      <td className={styles.warning}>Pending</td>
-                      <td className={ styles.primary}>Details</td>
-
-                  </tr>
-                   <tr>
-                      <td>Foldable Mini Drone</td>
-                      <td>85631</td>
+                      <td> 16-inch RingLight Gmax</td>
+                      <td>43531</td>
                       <td>Due</td>
                       <td className={styles.warning}>Pending</td>
                       <td className={ styles.primary}>Details</td>

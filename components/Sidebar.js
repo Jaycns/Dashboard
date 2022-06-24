@@ -8,12 +8,12 @@ import { MdInventory } from "react-icons/md";
 import { MdReportGmailerrorred } from "react-icons/md";
 import { MdSettings } from "react-icons/md";
 import { MdAdd } from "react-icons/md";
-import { MdUpdate } from "react-icons/md";
 import { MdLogout } from "react-icons/md";
-import { useState } from "react";
 
-export default function SideBar({handleClick, val}) {
-  
+export default function SideBar({
+  handleClick,
+  val,
+}) {
   return (
     <div className={styles.sidebar}>
       <a
@@ -115,11 +115,12 @@ export default function SideBar({handleClick, val}) {
         <h3>Settings</h3>
       </a>
       <a
-      
         name="Add Products"
         onClick={handleClick}
         className={
-          val === "Add Products" ? styles.active : ""
+          val === "Add Products"
+            ? styles.active
+            : ""
         }
       >
         <MdAdd className={styles.span} />

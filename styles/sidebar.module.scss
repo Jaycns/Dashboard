@@ -13,12 +13,17 @@
     align-items: center;
     position: relative;
     height: 3.7rem;
+    width: 14rem;
     transition: all 0.3s ease;
     color: $color-info-dark;
 
     .span {
       font-size: 1.6rem;
       transition: all 0.3s ease;
+      z-index: -1;
+    }
+    h3 {
+      z-index: -1;
     }
 
     &:hover {
@@ -36,6 +41,7 @@
       padding: 2px 10px;
       font-size: 11px;
       border-radius: $border-radius-1;
+      z-index: -1;
     }
   }
 
@@ -70,7 +76,16 @@
       width: 5.6rem;
       &:last-child {
         position: relative;
-        margin-top: 1.8rem;
+        margin-top: 7rem;
+      }
+      .messages {
+        font-size: 9px;
+        padding: 1px 7px;
+      }
+      .active {
+        span {
+          margin-left: 1px;
+        }
       }
     }
   }

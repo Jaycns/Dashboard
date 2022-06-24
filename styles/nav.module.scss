@@ -1,20 +1,21 @@
 @import "props.scss";
-.top {
-  
+.toop {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 1.4rem;
-
+  position: absolute;
+  left: 1%;
 }
-.btn{
+.btn {
   font-size: 25px;
-  margin: 0;
+  margin-left: 1.4rem;
+  display: none;
 }
 .logo {
   display: flex;
   gap: 0.8rem;
-  span{
+  span {
     color: $color-danger;
   }
 
@@ -23,16 +24,19 @@
     h2 {
       display: none;
     }
-    h3{
-        display: none;
+    h3 {
+      display: none;
     }
   }
-   @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     h2 {
       display: inline;
     }
-    h3{
-        display: inline;
+    h3 {
+      display: inline;
+    }
+    .btn {
+      display: inline;
     }
   }
 }

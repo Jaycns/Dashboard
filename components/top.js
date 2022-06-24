@@ -3,18 +3,26 @@ import styles from "../styles/top.module.scss";
 import { MdMenu } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
+import { MdSearch } from "react-icons/md";
+import Nav from "./Nav";
 
-function Top({ handleOpen }) {
+function Top() {
+  const handleOpen = () => setClick(true);
+  const handleClose = () => setClick(false);
   return (
     <div>
       {" "}
       <div className={styles.top}>
+        <Nav handleClose={handleClose} />
         <button
           id="menu-btn"
           onClick={handleOpen}
         >
           <MdMenu />
         </button>
+        <div className={styles.search}>
+          <MdSearch />
+        </div>
         <div
           className={styles.toggler}
           onClick={() =>

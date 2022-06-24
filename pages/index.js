@@ -1,16 +1,12 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
-import Nav from "../components/Nav";
 import SideBar from "../components/Sidebar";
 import Insights from "../components/Insights";
 import Recent from "../components/Recent";
 import Right from "../components/Right";
 import Analystics from "../components/Analystics";
 import Top from "../components/Top";
-import React, {
-  useState,
-  useEffect,
-} from "react";
+import React, { useState } from "react";
 import Exchange from "../exchange/Exchange";
 import MonthlyReports from "../exchange/reports";
 import FastPayment from "../exchange/fastPayment";
@@ -20,14 +16,6 @@ import Transaction from "../exchange/transactions";
 
 export default function Home() {
   const [click, setClick] = useState(false);
-  const handleOpen = () => setClick(true);
-  const handleClose = () => setClick(false);
-  const [theme, setTheme] = useState("light");
-  const toggleTheme = () => {
-    theme == "light"
-      ? setTheme("dark")
-      : setTheme("light");
-  };
   const [val, setVal] = useState("Dashboard");
   const handleClick = (e) =>
     setVal(e.target.getAttribute("name"));
@@ -44,15 +32,11 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Top
-        handleOpen={handleOpen}
-        click={click}
-      />
+      <Top click={click} setClick={setClick} />
       <aside
         className={styles.aside}
         style={{ display: click ? "block" : "" }}
       >
-        <Nav handleClose={handleClose} />
         <SideBar
           click={click}
           val={val}
@@ -64,57 +48,48 @@ export default function Home() {
         <div className={styles.date}>
           <input type="date" />
         </div>
-        {/* <Insights /> */}
-        {val === "Analystics" || "Dashboard" ? (
-          <Exchange />
-        ) : (
-          ""
-        )}
-        {val === "Analystics" || "Dashboard" ? (
-          <MonthlyReports />
-        ) : (
-          ""
-        )}
-        {val === "Analystics" || "Dashboard" ? (
-          <FastPayment />
-        ) : (
-          ""
-        )}
-        {val === "Analystics" || "Dashboard" ? (
-          <Canvas />
-        ) : (
-          ""
-        )}
-        {val === "Analystics" || "Orders" ? (
-          <Recent />
-        ) : (
-          ""
-        )}
+        <Insights />
 
-        {/* <Recent /> */}
+        <Exchange />
+
+        <MonthlyReports />
+
+        <FastPayment />
+
+        <Canvas />
+
+        <Recent />
+
+        <footer className={styles.footer}>
+          <a
+            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h3 className={styles.muted}>
+              Powered by {""}
+            </h3>
+            <span className={styles.slogo}>
+              <img
+                src="/asset/jaycn_d.png"
+                alt="Vercel Logo"
+                width="12px"
+                height="16px"
+                className={styles.img}
+              />
+            </span>
+            <h3 className={styles.muted}>
+              Jaycn with Vercel
+            </h3>
+          </a>
+        </footer>
       </main>
-      <div className="">
-        {/* <Right
-          handleOpen={handleOpen}
-          click={ click }
-          
-        /> */}
+      <div className={styles.side}>
         <Investment />
         <Transaction />
-        {/* <Analystics /> */}
+        <Right />
+        <Analystics />
       </div>
-      {/* <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer> */}
     </div>
   );
 }

@@ -1,14 +1,12 @@
-import Image from "next/image";
-import logo from "../public/asset/jaycn_d.png";
 import { MdClose } from "react-icons/md";
 import styles from "../styles/nav.module.scss";
 
 function Nav({ handleClose }) {
   return (
-    <div className={styles.top}>
+    <div className={styles.toop}>
       <div className={styles.logo}>
-        <Image
-          src={logo}
+        <img
+          src="/asset/jaycn_d.png"
           width="40px"
           height="40px"
           alt="Just in"
@@ -16,13 +14,11 @@ function Nav({ handleClose }) {
         />
         <h2>
           JAY
-          <span className={styles}>
-            CN
-          </span>
+          <span className={styles}>CN</span>
         </h2>
       </div>
       <div
-              className={ styles.btn }
+        className={styles.btn}
         id="close-btn"
         onClick={handleClose}
       >

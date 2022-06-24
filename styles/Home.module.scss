@@ -1,10 +1,8 @@
 @use "./props.scss" as *;
 .container {
   display: flex;
-  margin: 0 auto;
+  margin: 0 1%;
   gap: 1.8rem;
-
-  
 
   // .dark {
   //   $color-background: #181a1e;
@@ -27,6 +25,7 @@
 }
 .aside {
   height: 100vh;
+  margin-top: 5rem;
   position: fixed;
   @media screen and (max-width: 768px) {
     position: fixed;
@@ -49,6 +48,28 @@
   margin-top: 6rem;
   padding: 0 1rem;
   margin-left: 15rem;
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 768px){
+      position: absolute;
+      bottom: 0;
+    }
+  
+    a{
+      display: flex;
+      justify-content: space-between;
+      width: 15rem;
+    }
+    .slogo {
+      width: 10%;
+      .img {
+        width: 20px;
+        margin-top: .2rem;
+      }
+    }
+  }
   @media screen and (max-width: 1200px) {
     margin-top: 6rem;
     margin-left: 7rem;
@@ -57,7 +78,6 @@
     margin-top: 6rem;
     margin-left: 0rem;
   }
-  
 
   .date {
     display: inline-block;

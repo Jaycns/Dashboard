@@ -1,10 +1,6 @@
 import styles from "../styles/right.module.scss";
-import Image from "next/image";
-import photo from "../public/asset/jaycn_pics2.png";
-import { useState } from "react";
 
 function Right() {
-
   return (
     <div className={styles.right}>
       <div className={styles.recent}>
@@ -12,58 +8,50 @@ function Right() {
         <div className={styles.updates}>
           <div className={styles.update}>
             <div className={styles.photo}>
-              <Image
-                width="50px"
-                height="50px"
-                src={photo}
+              <img
+                src="/asset/blue.png"
                 alt="great"
               />
             </div>
             <div className={styles.message}>
               <p>
-                <b>Mike Tyson</b> received his
+                <b>Eleon Musk</b> received his
                 order of Night lion tech GPS
                 drone.
               </p>
               <small className={styles.muted}>
-                2 Minutes Ago
+                3 Days Ago
               </small>
             </div>
           </div>
           <div className={styles.update}>
             <div className={styles.photo}>
-              <Image
-                width="50px"
-                height="50px"
-                src={photo}
+              <img
+                src="/asset/pink.png"
                 alt="There"
               />
             </div>
             <div className={styles.message}>
               <p>
-                <b>Mike Tyson</b> received his
-                order of Night lion tech GPS
-                drone.
+                <b>Julius Caesar</b> received his
+                order of Samsung galaxy S22.
               </p>
               <small className={styles.muted}>
-                2 Minutes Ago
+                58 Minutes Ago
               </small>
             </div>
           </div>
           <div className={styles.update}>
             <div className={styles.photo}>
-              <Image
-                width="50px"
-                height="50px"
-                src={photo}
+              <img
+                src="/asset/yellow.png"
                 alt="Here there"
               />
             </div>
             <div className={styles.message}>
               <p>
-                <b>Mike Tyson</b> received his
-                order of Night lion tech GPS
-                drone.
+                <b>Steph Chi</b> received her
+                order of 16-inch ringLight Gmax
               </p>
               <small className={styles.muted}>
                 2 Minutes Ago
