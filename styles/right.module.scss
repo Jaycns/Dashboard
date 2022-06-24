@@ -1,6 +1,9 @@
 @use "./props.scss" as *;
 .right {
   margin-top: 1.4rem;
+  @media screen and (max-width: 768px) {
+        margin: 0rem 0.5rem 0rem 1rem;
+      }
   .top {
     display: flex;
     justify-content: flex-end;

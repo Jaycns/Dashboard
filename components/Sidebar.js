@@ -17,7 +17,7 @@ export default function SideBar({
   return (
     <div className={styles.sidebar}>
       <a
-        href="#"
+        href="#dashboard"
         name="Dashboard"
         onClick={handleClick}
         className={
@@ -40,7 +40,6 @@ export default function SideBar({
         <h3>Customers</h3>
       </a>
       <a
-        href="#"
         name="Orders"
         onClick={handleClick}
         className={
@@ -51,7 +50,6 @@ export default function SideBar({
         <h3>Orders</h3>
       </a>
       <a
-        href="#"
         name="Analystics"
         onClick={handleClick}
         className={

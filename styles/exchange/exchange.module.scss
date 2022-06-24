@@ -1,17 +1,20 @@
 @use "../props.scss" as *;
+
+.head {
+  margin-top: 2rem;
+}
 .cards {
-  margin-top: 1rem;
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
     minmax(280px, 1fr)
   );
   gap: 1.5rem;
-
   .card {
     background: linear-gradient(#ff796f, #bd261b);
     padding: $card-padding;
     border-radius: $card-border-radius-1;
+    margin-top: 2rem;
     color: white;
     height: 16rem;
     display: flex;

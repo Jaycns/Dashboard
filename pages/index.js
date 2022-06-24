@@ -13,6 +13,7 @@ import FastPayment from "../exchange/fastPayment";
 import Canvas from "../exchange/Canvas";
 import Investment from "../exchange/investment";
 import Transaction from "../exchange/transactions";
+//import { BarContext } from "../context/context";
 
 export default function Home() {
   const [click, setClick] = useState(false);
@@ -48,7 +49,11 @@ export default function Home() {
         <div className={styles.date}>
           <input type="date" />
         </div>
-        <Insights />
+        {val === "Dashboard" || "Orders" ? (
+          <Insights />
+        ) : (
+          ""
+        )}
 
         <Exchange />
 

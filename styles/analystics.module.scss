@@ -1,6 +1,9 @@
 @import "props.scss";
 .analystics {
   margin-top: 1rem;
+  @media screen and (max-width: 768px) {
+    margin: 2rem 0.5rem 5rem 1rem;
+  }
   h2 {
     margin-bottom: 0.8rem;
   }
@@ -31,7 +34,6 @@
       background: $color-primary;
       display: flex;
     }
-
   }
   .online {
     .icon {
@@ -49,23 +51,22 @@
     }
   }
   .add {
-      background: transparent;
-      border: 2px dashed $color-primary;
-      color: $color-primary;
+    background: transparent;
+    border: 2px dashed $color-primary;
+    color: $color-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div {
       display: flex;
       align-items: center;
-      justify-content: center;
-      div{
-        display: flex;
-        align-items: center;
-        gap: 0.6rem;
-      }
-      h3{
-        font-weight: 500;
-      }
-      .span{
-        font-size: 22px;
-      }
+      gap: 0.6rem;
     }
-
+    h3 {
+      font-weight: 500;
+    }
+    .span {
+      font-size: 22px;
+    }
+  }
 }
