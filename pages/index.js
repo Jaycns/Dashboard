@@ -5,12 +5,12 @@ import Insights from "../components/Insights";
 import Recent from "../components/Recent";
 import Right from "../components/Right";
 import Analystics from "../components/Analystics";
-import Top from "../components/Top";
+import Top from "../components/top";
 import React, { useState } from "react";
 import Exchange from "../exchange/Exchange";
 import MonthlyReports from "../exchange/reports";
 import FastPayment from "../exchange/fastPayment";
-import Canvas from "../exchange/canvas";
+import Canvas from "../exchange/Canvas";
 import Investment from "../exchange/investment";
 import Transaction from "../exchange/transactions";
 
