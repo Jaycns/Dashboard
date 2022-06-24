@@ -52,12 +52,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @media screen and (max-width: 768px){
-      position: absolute;
-      bottom: 0;
+    @media screen and (max-width: 768px) {
+      display: none;
     }
-  
-    a{
+
+    a {
       display: flex;
       justify-content: space-between;
       width: 15rem;
@@ -66,7 +65,7 @@
       width: 10%;
       .img {
         width: 20px;
-        margin-top: .2rem;
+        margin-top: 0.2rem;
       }
     }
   }
