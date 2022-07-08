@@ -21,9 +21,7 @@ function Top({ setClick, click }) {
       {" "}
       <div className={styles.top} style={{}}>
         <Nav />
-        <button 
-          onClick={handleOpen}
-        >
+        <button onClick={handleOpen}>
           <MdMenu />
         </button>
         <div className={styles.search}>
@@ -34,14 +32,18 @@ function Top({ setClick, click }) {
           onClick={themeToggler}
         >
           <MdLightMode
-            className={`${styles.span} ${
-              toggler ? styles : styles.active
-            }`}
+            className={
+              toggler
+                ? styles.span
+                : `${styles.span} ${styles.active}`
+            }
           />
           <MdDarkMode
-            className={`${styles.span} ${
-              toggler ? styles.active : styles
-            }`}
+            className={
+              toggler
+                ? `${styles.span} ${styles.active}`
+                : styles.span
+            }
           />
         </div>
         <div className={styles.profile}>

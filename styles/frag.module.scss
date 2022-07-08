@@ -1,5 +1,6 @@
 @use "./props.scss" as *;
-@import "./home.module.scss";
+@use "./home.module.scss" as *;
+
 .frag {
   width: 90rem;
   @media screen and (max-width: 1800px) {

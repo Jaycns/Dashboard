@@ -1,7 +1,4 @@
-import React, {
-  useContext,
-  useEffect,
-} from "react";
+import React from "react";
 import { useRouter } from "next/router";
 import Insights from "../components/insights";
 import styles from "../styles/frag.module.scss";

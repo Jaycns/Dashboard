@@ -10,11 +10,7 @@ function Layout({ children }) {
     <div className={styles.container}>
       <Top click={click} setClick={setClick} />
       <aside
-        className={
-          click
-            ? styles.asider
-            : `${styles.asider} ${styles.close}`
-        }
+        className={styles.asider}
         style={{ display: click ? "block" : "" }}
       >
         <SideBar click={click} />
