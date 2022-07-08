@@ -57,7 +57,6 @@ export default function SideBar({ click }) {
       >
         <Link as="/" href="/">
           <a
-            href="/"
             name="Dashboard"
             onClick={handleClick}
             className={
@@ -139,7 +138,6 @@ export default function SideBar({ click }) {
         </Link>
         <Link as="/products" href="/products">
           <a
-            href="/products"
             name="products"
             onClick={handleClick}
             className={
@@ -170,35 +168,40 @@ export default function SideBar({ click }) {
             <h3>Reports</h3>
           </a>
         </Link>
-        <a
-          href="/"
-          name="settings"
-          onClick={handleClick}
-          className={
-            val === "settings"
-              ? styles.active
-              : ""
-          }
-        >
-          <MdSettings className={styles.span} />
-          <h3>Settings</h3>
-        </a>
-        <a
-          name="Add Products"
-          onClick={handleClick}
-          className={
-            val === "Add Products"
-              ? styles.active
-              : ""
-          }
-        >
-          <MdAdd className={styles.span} />
-          <h3>Add Products</h3>
-        </a>
-        <a href="" className="">
-          <MdLogout className={styles.span} />
-          <h3>Logout</h3>
-        </a>
+        <Link href="/">
+          <a
+            name="settings"
+            onClick={handleClick}
+            className={
+              val === "settings"
+                ? styles.active
+                : ""
+            }
+          >
+            <MdSettings className={styles.span} />
+            <h3>Settings</h3>
+          </a>
+        </Link>
+        <Link href="/">
+          <a
+            name="Add Products"
+            onClick={handleClick}
+            className={
+              val === "Add Products"
+                ? styles.active
+                : ""
+            }
+          >
+            <MdAdd className={styles.span} />
+            <h3>Add Products</h3>
+          </a>
+        </Link>
+        <Link href="/">
+          <a className="">
+            <MdLogout className={styles.span} />
+            <h3>Logout</h3>
+          </a>
+        </Link>
       </div>
     </div>
   );
