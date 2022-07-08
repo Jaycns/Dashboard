@@ -1,26 +1,18 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.scss";
-import SideBar from "../components/Sidebar";
-import Insights from "../components/Insights";
-import Recent from "../components/Recent";
-import Right from "../components/Right";
-import Analystics from "../components/Analystics";
-import Top from "../components/top";
-import React, { useState } from "react";
-import Exchange from "../exchange/Exchange";
+import styles from "../styles/home.module.scss";
+import Insights from "../components/insights";
+import Recent from "../components/recent";
+import Right from "../components/right";
+import Analystics from "../components/analystics";
+import Exchange from "../exchange/exchange";
 import MonthlyReports from "../exchange/reports";
 import FastPayment from "../exchange/fastPayment";
-import Canvas from "../exchange/Canvas";
+import Canvas from "../exchange/canvas";
 import Investment from "../exchange/investment";
 import Transaction from "../exchange/transactions";
-//import { BarContext } from "../context/context";
+import { syn } from "./[orders]";
 
 export default function Home() {
-  const [click, setClick] = useState(false);
-  const [val, setVal] = useState("Dashboard");
-  const handleClick = (e) =>
-    setVal(e.target.getAttribute("name"));
-
   return (
     <div className={styles.container}>
       <Head>
@@ -33,7 +25,7 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Top click={click} setClick={setClick} />
+      {/* <Top click={click} setClick={setClick} />
       <aside
         className={styles.aside}
         style={{ display: click ? "block" : "" }}
@@ -43,17 +35,13 @@ export default function Home() {
           val={val}
           handleClick={handleClick}
         />
-      </aside>
-      <main className={styles.main}>
-        <h1>Dashboard</h1>
+      </aside> */}
+      <main className={styles}>
+        <h1>Dashboard {syn}</h1>
         <div className={styles.date}>
           <input type="date" />
         </div>
-        {val === "Dashboard" || "Orders" ? (
-          <Insights />
-        ) : (
-          ""
-        )}
+        <Insights />
 
         <Exchange />
 
@@ -64,30 +52,6 @@ export default function Home() {
         <Canvas />
 
         <Recent />
-
-        <footer className={styles.footer}>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h3 className={styles.muted}>
-              Powered by {""}
-            </h3>
-            <span className={styles.slogo}>
-              <img
-                src="/asset/jaycn_d.png"
-                alt="Vercel Logo"
-                width="12px"
-                height="16px"
-                className={styles.img}
-              />
-            </span>
-            <h3 className={styles.muted}>
-              Jaycn with Vercel
-            </h3>
-          </a>
-        </footer>
       </main>
       <div className={styles.side}>
         <Investment />

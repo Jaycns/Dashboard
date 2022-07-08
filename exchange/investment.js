@@ -64,7 +64,7 @@ function Investment() {
             </small>
           </div>
           <div className={styles.amount}>
-            <h4>$20,033</h4>
+            <h4>$30,033</h4>
             <small className={styles.muted}>
               +5.27%
             </small>

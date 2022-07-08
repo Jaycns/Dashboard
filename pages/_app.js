@@ -1,12 +1,15 @@
 import "../styles/globals.scss";
-import styles from "../styles/globals.scss";
+import { ThemeProvider } from '../context/context'
+import Layout from "./layout";
 
 function MyApp({ Component, pageProps }) {
   
   return (
-    <div className={styles.dark}>
-      <Component {...pageProps} />
-    </div>
+    <ThemeProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ThemeProvider>
   );
 }
 

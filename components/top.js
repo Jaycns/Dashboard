@@ -1,21 +1,27 @@
-import React from "react";
+import React, {
+  useState,
+  useContext,
+} from "react";
 import styles from "../styles/top.module.scss";
 import { MdMenu } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
 import { MdSearch } from "react-icons/md";
-import Nav from "./Nav";
+import Nav from "./nav";
+import ThemeContext from "../context/context";
 
-function Top() {
-  const handleOpen = () => setClick(true);
-  const handleClose = () => setClick(false);
+function Top({ setClick, click }) {
+  const { light, dark } =
+    useContext(ThemeContext);
+  const [toggler, setToggler] = useState(false);
+  const themeToggler = () => setToggler(!toggler);
+  const handleOpen = () => setClick(!click);
   return (
     <div>
       {" "}
-      <div className={styles.top}>
-        <Nav handleClose={handleClose} />
-        <button
-          id="menu-btn"
+      <div className={styles.top} style={{}}>
+        <Nav />
+        <button 
           onClick={handleOpen}
         >
           <MdMenu />
@@ -25,13 +31,17 @@ function Top() {
         </div>
         <div
           className={styles.toggler}
-          onClick={() =>
-            document.body.classList.toggle("dark")
-          }
+          onClick={themeToggler}
         >
-          <MdLightMode className={styles.span} />
+          <MdLightMode
+            className={`${styles.span} ${
+              toggler ? styles : styles.active
+            }`}
+          />
           <MdDarkMode
-            className={`${styles.span} ${styles.active}`}
+            className={`${styles.span} ${
+              toggler ? styles.active : styles
+            }`}
           />
         </div>
         <div className={styles.profile}>

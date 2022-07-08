@@ -79,7 +79,7 @@ function Canvas() {
         },
         title: {
           display: true,
-          text: "whom'st let the dogs out",
+          text: "Analysis by Jaycn",
         },
       },
     });
@@ -87,13 +87,18 @@ function Canvas() {
   // set options
 
   return (
-    <div>
-      <Line
-        data={chartData}
-        options={chartDataOptions}
-        className={styles.chart}
-      />
-    </div>
+    <>
+      <h2 className={styles.head}>
+        Today's Analysis
+      </h2>
+      <div>
+        <Line
+          data={chartData}
+          options={chartDataOptions}
+          className={styles.chart}
+        />
+      </div>
+    </>
   );
 }
 

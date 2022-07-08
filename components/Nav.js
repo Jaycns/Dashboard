@@ -1,7 +1,7 @@
 import { MdClose } from "react-icons/md";
 import styles from "../styles/nav.module.scss";
 
-function Nav({ handleClose }) {
+function Nav() {
   return (
     <div className={styles.toop}>
       <div className={styles.logo}>
@@ -20,7 +20,6 @@ function Nav({ handleClose }) {
       <div
         className={styles.btn}
         id="close-btn"
-        onClick={handleClose}
       >
         <MdClose />
       </div>

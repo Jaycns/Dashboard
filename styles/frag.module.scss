@@ -1,0 +1,22 @@
+@use "./props.scss" as *;
+@import "./home.module.scss";
+.frag {
+  width: 90rem;
+  @media screen and (max-width: 1800px) {
+    width: 75rem;
+  }
+  @media screen and (max-width: 1600px) {
+    width: 70rem;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 65rem;
+  }
+  @media screen and (max-width: 1200px) {
+    overflow-x: hidden;
+    width: 45rem;
+    max-width: 45rem;
+  }
+  @media screen and (max-width: 768px) {
+    width: 47rem;
+  }
+}

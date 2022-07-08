@@ -4,7 +4,7 @@ import styles from "../styles/exchange/exchange.module.scss";
 function Exchange() {
   return (
     <div className="">
-      <h1 className={styles.head}>Exchange</h1>
+      <h2 className={styles.head}>Exchange</h2>
       <div className={styles.cards}>
         <div className={styles.card}>
           <div className={styles.top}>
