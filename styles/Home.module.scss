@@ -1,4 +1,5 @@
 @use "./props.scss" as *;
+
 .container {
   display: flex;
   margin: 0 1%;
@@ -57,41 +58,6 @@
         left: -100%;
       }
     }
-  }
-}
-.mainer {
-  margin-top: 6rem;
-  padding: 0 1rem;
-  margin-left: 15rem;
-
-  .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
-
-    a {
-      display: flex;
-      justify-content: space-between;
-      width: 15rem;
-    }
-    .slogo {
-      width: 10%;
-      .img {
-        width: 20px;
-        margin-top: 0.2rem;
-      }
-    }
-  }
-  @media screen and (max-width: 1200px) {
-    margin-top: 6rem;
-    margin-left: 7rem;
-  }
-  @media screen and (max-width: 768px) {
-    margin-top: 6rem;
-    margin-left: 0rem;
   }
 }
 
