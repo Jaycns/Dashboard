@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "../styles/home.module.scss";
+import styles from "../styles/homers.module.scss";
 import Insights from "../components/insight";
 import Recent from "../components/recents";
 import Right from "../components/righter";
@@ -10,6 +10,7 @@ import FastPayment from "../exchange/fastPayment";
 import Canvas from "../exchange/cranvas";
 import Investment from "../exchange/investments";
 import Transaction from "../exchange/transactions";
+
 import { syn } from "./orders.js";
 
 export default function Home() {
