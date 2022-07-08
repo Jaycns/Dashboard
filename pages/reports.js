@@ -1,7 +1,7 @@
 import React from "react";
 import Canvas from "../exchange/canvas";
 import styles from "../styles/frag.module.scss";
-import { syn } from "./[orders]";
+import { syn } from "./orders.js";
 
 function Reports() {
   return (

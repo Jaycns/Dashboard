@@ -10,7 +10,7 @@ import FastPayment from "../exchange/fastPayment";
 import Canvas from "../exchange/canvas";
 import Investment from "../exchange/investment";
 import Transaction from "../exchange/transactions";
-import { syn } from "./[orders]";
+import { syn } from "./orders.js";
 
 export default function Home() {
   return (

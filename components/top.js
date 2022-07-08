@@ -1,18 +1,17 @@
 import React, {
   useState,
-  useContext,
 } from "react";
 import styles from "../styles/top.module.scss";
 import { MdMenu } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
 import { MdSearch } from "react-icons/md";
-import Nav from "./nav";
-import ThemeContext from "../context/context";
+import Nav from "./navi";
+//import ThemeContext from "../context/context";
 
 function Top({ setClick, click }) {
-  const { light, dark } =
-    useContext(ThemeContext);
+  // const { light, dark } =
+  //   useContext(ThemeContext);
   const [toggler, setToggler] = useState(false);
   const themeToggler = () => setToggler(!toggler);
   const handleOpen = () => setClick(!click);

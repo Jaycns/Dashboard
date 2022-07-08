@@ -23,17 +23,17 @@ function Orders() {
     </main>
   );
 }
-export const getStaticPaths = () => {
-  return {
-    paths: [
-      { params: { orders: "orders" } },
-      { params: { orders: "2" } },
-    ],
-    fallback: false,
-  };
-};
+// export const getStaticPaths = () => {
+//   return {
+//     paths: [
+//       { params: { orders: "orders" } },
+//       { params: { orders: "2" } },
+//     ],
+//     fallback: false,
+//   };
+// };
 
-export const getStaticProps = (context) => {
-  return { props: {} };
-};
+// export const getStaticProps = (context) => {
+//   return { props: {} };
+// };
 export default Orders;

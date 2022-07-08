@@ -3,7 +3,7 @@ import Insights from "../components/insights";
 import FastPayment from "../exchange/fastPayment";
 //import Investment from "../exchange/investment";
 import styles from "../styles/frag.module.scss";
-import { syn } from "./[orders]";
+import { syn } from "./orders.js";
 
 function Products() {
   return (
