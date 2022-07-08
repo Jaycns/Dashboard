@@ -34,6 +34,19 @@ $box-shadow: 0 2rem 3rem $color-light;
 // $color-light: rgba(0, 0, 0, 0.4);
 // $box-shadow: 0 2rem 3rem $color-light;
 
+.date {
+  display: inline-block;
+  background: $color-light;
+  border-radius: $border-radius-1;
+  margin: 1rem 0;
+
+  input {
+    background: transparent;
+    border: none;
+    color: $color-dark;
+    padding: 0.8rem 3rem 0.8rem 1.2rem;
+  }
+}
 .primary {
   color: $color-primary;
 }

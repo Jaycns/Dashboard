@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Top from "../components/tops";
-import SideBar from "../components/sidebar";
-import styles from "../styles/home.module.scss";
+import SideBar from "../components/sidebars";
+import styles from "../styles/layout.module.scss";
 
 function Layout({ children }) {
   const [click, setClick] = useState(false);

@@ -3,7 +3,7 @@ import styles from "../styles/frag.module.scss";
 import Recent from "../components/recents";
 import Right from "../components/righter";
 import Transactions from "../exchange/transactions";
-import { syn } from "./[orders]";
+import { syn } from "./orders";
 
 function Customers() {
   return (
