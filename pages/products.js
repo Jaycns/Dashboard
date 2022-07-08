@@ -1,5 +1,5 @@
 import React from "react";
-import Insights from "../components/insights";
+import Insights from "../components/insight";
 import FastPayment from "../exchange/fastPayment";
 //import Investment from "../exchange/investment";
 import styles from "../styles/frag.module.scss";

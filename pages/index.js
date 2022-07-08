@@ -1,14 +1,14 @@
 import Head from "next/head";
 import styles from "../styles/home.module.scss";
-import Insights from "../components/insights";
-import Recent from "../components/recent";
-import Right from "../components/right";
-import Analystics from "../components/analystics";
-import Exchange from "../exchange/exchange";
+import Insights from "../components/insight";
+import Recent from "../components/recents";
+import Right from "../components/righter";
+import Analystics from "../components/analysticals";
+import Exchange from "../exchange/exchanger";
 import MonthlyReports from "../exchange/reports";
 import FastPayment from "../exchange/fastPayment";
-import Canvas from "../exchange/canvas";
-import Investment from "../exchange/investment";
+import Canvas from "../exchange/cranvas";
+import Investment from "../exchange/investments";
 import Transaction from "../exchange/transactions";
 import { syn } from "./orders.js";
 

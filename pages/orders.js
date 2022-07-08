@@ -1,9 +1,9 @@
 import React from "react";
 import { useRouter } from "next/router";
-import Insights from "../components/insights";
+import Insights from "../components/insight";
 import styles from "../styles/frag.module.scss";
-import Recent from "../components/recent";
-import Right from "../components/right";
+import Recent from "../components/recents";
+import Right from "../components/righter";
 import Transactions from "../exchange/transactions";
 
 export const syn = ">";

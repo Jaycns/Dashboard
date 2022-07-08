@@ -12,7 +12,7 @@ function Transaction() {
       <div className={styles.header}>
         <h2>Recent Transactions</h2>
         <a href="#">
-         More <MdChevronRight className="" />
+          More <MdChevronRight className="" />
         </a>
       </div>
       <div className={styles.transaction}>
@@ -20,7 +20,10 @@ function Transaction() {
           <div
             className={`${styles.icon} ${styles.purple}`}
           >
-            <MdHeadphones fill='purple' className={styles} />
+            <MdHeadphones
+              fill="purple"
+              className={styles}
+            />
           </div>
           <div className={styles.details}>
             <h4>Music</h4>
@@ -51,7 +54,7 @@ function Transaction() {
           <div
             className={`${styles.icon} ${styles.dangerA}`}
           >
-            <MdShoppingBag fill="red"/>
+            <MdShoppingBag fill="red" />
           </div>
           <div className={styles.details}>
             <h4>Shopping</h4>
@@ -82,7 +85,7 @@ function Transaction() {
           <div
             className={`${styles.icon} ${styles.successB}`}
           >
-            <MdRestaurant fill="green"/>
+            <MdRestaurant fill="green" />
           </div>
           <div className={styles.details}>
             <h4>Restaurant</h4>
@@ -113,7 +116,7 @@ function Transaction() {
           <div
             className={`${styles.icon} ${styles.primaryBf}`}
           >
-            <MdSportsEsports fill="blue"/>
+            <MdSportsEsports fill="blue" />
           </div>
           <div className={styles.details}>
             <h4>Games</h4>

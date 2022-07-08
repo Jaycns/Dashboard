@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/frag.module.scss";
-import Recent from "../components/recent";
-import Right from "../components/right";
+import Recent from "../components/recents";
+import Right from "../components/righter";
 import Transactions from "../exchange/transactions";
 import { syn } from "./[orders]";
 

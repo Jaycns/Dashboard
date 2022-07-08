@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/frag.module.scss";
-import Right from "../components/right";
+import Right from "../components/righter";
 //import Investment from "../exchange/investment";
 import Transaction from "../exchange/transactions";
 import { syn } from "./orders.js";

@@ -1,5 +1,5 @@
 import React from "react";
-import Canvas from "../exchange/canvas";
+import Canvas from "../exchange/cranvas";
 import styles from "../styles/frag.module.scss";
 import { syn } from "./orders.js";
 
