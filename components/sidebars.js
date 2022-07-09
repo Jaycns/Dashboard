@@ -13,7 +13,10 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-export default function SideBar({ click }) {
+export default function SideBar({
+  click,
+  setClick,
+}) {
   const [val, setVal] = useState("Dashboard");
   let initialVal = "";
   useEffect(() => {
@@ -38,6 +41,10 @@ export default function SideBar({ click }) {
   console.log(initialVal);
   function handleClick(e) {
     setVal(e.target.getAttribute("name"));
+    setTimeout(() => {
+      setClick(!click);
+    }, 3000);
+
     localStorage.setItem(
       "val",
       JSON.stringify(

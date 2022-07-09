@@ -26,7 +26,7 @@ function Investment() {
             alt="This is Africa"
           />
           <h4>Unilever</h4>
-          <div className={styles.date}>
+          <div className={styles.dater}>
             <p>{timeNow}</p>
             <small className={styles.muted}>
               {timeD}
@@ -51,7 +51,7 @@ function Investment() {
             alt="This is Africa"
           />
           <h4>McDonald's</h4>
-          <div className={styles.date}>
+          <div className={styles.dater}>
             <p>{timeNow}</p>
             <small className={styles.muted}>
               {timeD}
@@ -76,7 +76,7 @@ function Investment() {
             alt="This is Africa"
           />
           <h4>Tesla</h4>
-          <div className={styles.date}>
+          <div className={styles.dater}>
             <p>{timeNow}</p>
             <small className={styles.muted}>
               {timeD}
@@ -101,7 +101,7 @@ function Investment() {
             alt="This is Africa"
           />
           <h4>Monster</h4>
-          <div className={styles.date}>
+          <div className={styles.dater}>
             <p>{timeNow}</p>
             <small className={styles.muted}>
               {timeD}

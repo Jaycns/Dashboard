@@ -15,6 +15,7 @@ function Top({ setClick, click }) {
   const [toggler, setToggler] = useState(false);
   const themeToggler = () => setToggler(!toggler);
   const handleOpen = () => setClick(!click);
+ 
   return (
     <div>
       {" "}

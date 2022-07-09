@@ -6,6 +6,7 @@ import styles from "../styles/layout.module.scss";
 function Layout({ children }) {
   const [click, setClick] = useState(false);
 
+
   return (
     <div className={styles.container}>
       <Top click={click} setClick={setClick} />
@@ -13,7 +14,7 @@ function Layout({ children }) {
         className={styles.asider}
         style={{ display: click ? "block" : "" }}
       >
-        <SideBar click={click} />
+        <SideBar click={click} setClick={setClick} />
       </aside>
       <main className={styles.mainer}>
         {children}
