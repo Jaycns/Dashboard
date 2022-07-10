@@ -18,7 +18,7 @@
     width: 94%;
   }
   @media screen and (max-width: 768px) {
-    width: 53rem;
+    width: 100%;
     flex-direction: column;
   }
 }
@@ -60,7 +60,6 @@
   }
 }
 
-
 .mainer {
   margin-top: 6rem;
   padding: 0 1rem;
@@ -94,6 +93,6 @@
   @media screen and (max-width: 768px) {
     margin-top: 6rem;
     margin-left: 0rem;
-    margin-right: 2rem;;
+    margin-right: 2rem;
   }
 }
