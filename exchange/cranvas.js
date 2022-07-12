@@ -96,6 +96,7 @@ function Canvas() {
           data={chartData}
           options={chartDataOptions}
           className={styles.chart}
+          style={{ backgroundColor: "#202528" }}
         />
       </div>
     </>

@@ -4,56 +4,53 @@ import {
   useState,
 } from "react";
 
-const reducer = (state, action) => {
+const reducer = (toggler, action) => {
   switch (action.type) {
-    case "Dark":
-      return {
-        ...state,
-        isLight: false,
-        dark: {
-          colorBg: "#181a1e",
-          colorWhite: "#202528",
-          colorDark: "#edeffd",
-          colorDarkVar: "#a3bdcc",
-          colorLight: "rgba(0, 0, 0, 0.4)",
-        },
-      };
+    case "add":
+      return  true;
+    case "remove":
+      return  false;
     default:
-      return state;
+      return false;
   }
 };
 const ThemeContext = createContext();
 export const ThemeProvider = (props) => {
-  const [state, dispatch] = useReducer(reducer, {
-    isLight: true,
-    dark: {
-      colorBg: "#f6f6f9",
-      colorWhite: "#fff",
-      colorDark: "#363949",
-      colorDarkVar: "#677483",
-      colorLight: "rgba(132, 139, 200, 0.18)",
-    },
-  });
- 
+  const [toggler, dispatch] = useReducer(
+    reducer,
+     false 
+  );
+  const [toggle, setToggle] = useState(false);
+
+  const themeToggler = () => {
+    if (!toggler) {
+      dispatch({ type: "add" });
+      document.body.classList.add("dark");
+      setToggle(!toggle);
+    } else {
+      dispatch({ type: "remove" });
+      document.body.classList.remove("dark");
+    }
+  };
   const stateActions = {
-    light: {
-      colorBg: "#f6f6f9",
-      colorWhite: "#fff",
-      colorDark: "#363949",
-      colorDarkVar: "#677483",
-      colorLight: "rgba(132, 139, 200, 0.18)",
-    },
-    dark: {
-      colorBg: "#181a1e",
-      colorWhite: "#202528",
-      colorDark: "#edeffd",
-      colorDarkVar: "#a3bdcc",
-      colorLight: "rgba(0, 0, 0, 0.4)",
-    },
+    // light: {
+    //   colorBg: "#f6f6f9",
+    //   colorWhite: "#fff",
+    //   colorDark: "#363949",
+    //   colorDarkVar: "#677483",
+    //   colorLight: "rgba(132, 139, 200, 0.18)",
+    // },
+    // dark: {
+    //   colorBg: "#181a1e",
+    //   colorWhite: "#202528",
+    //   colorDark: "#edeffd",
+    //   colorDarkVar: "#a3bdcc",
+    //   colorLight: "rgba(0, 0, 0, 0.4)",
+    // },
   };
   return (
     <ThemeContext.Provider
-      value={{ theme: state, ...stateActions }}
+      value={{ theme: toggle, themeToggler, }}
     >
       {props.children}
     </ThemeContext.Provider>

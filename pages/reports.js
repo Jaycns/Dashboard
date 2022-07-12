@@ -7,7 +7,7 @@ function Reports() {
   return (
     <main className={`${styles.frag}`}>
       <h1>Reports {syn}</h1>
-      <div>
+      <div className={styles.fraglin}>
         <div className={styles.date}>
           <input type="date" />
         </div>

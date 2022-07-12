@@ -22,6 +22,7 @@
     }
     @media screen and (max-width: 768px) {
       border-radius: 1rem;
+    
     }
   }
   .expenses {
@@ -95,4 +96,9 @@
     grid-template-columns: 1fr;
     gap: 0;
   }
+}
+.insights.dark{
+   & > div {
+    background: #202528;
+   }
 }

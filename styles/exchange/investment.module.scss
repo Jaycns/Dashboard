@@ -47,3 +47,13 @@
     }
   }
 }
+.investments.dark {
+    background: #202528;
+    .investment {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.4);
+      }
+    }
+  }

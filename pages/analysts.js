@@ -12,7 +12,7 @@ function Analysts() {
     <div>
       <main className={styles.frag}>
         <h1>Analystics {syn}</h1>
-        <div>
+        <div className={styles.fraglin}>
           <Exchange />
           <Report />
           <Analystics />

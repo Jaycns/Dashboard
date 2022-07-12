@@ -37,7 +37,7 @@
     @media screen and (max-width: 768px) {
       left: 27%;
       width: 16rem;
-      height: 1rem
+      height: 1rem;
     }
   }
   .toggler {
@@ -87,3 +87,17 @@
   display: none;
 }
 
+.top.dark {
+  background: #202528;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4);
+  .search {
+    color: #edeffd;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .toggler {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  button {
+    color: #edeffd;
+  }
+}

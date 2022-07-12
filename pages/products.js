@@ -9,7 +9,7 @@ function Products() {
   return (
     <main className={styles.frag}>
       <h1>Products{syn}</h1>
-      <div>
+      <div className={styles.fraglin}>
         <Insights />
         <FastPayment />
         {/* <Investment /> */}

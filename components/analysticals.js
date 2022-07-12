@@ -6,7 +6,9 @@ import { MdAdd } from "react-icons/md";
 
 function Analystics() {
   return (
-    <div className={styles.analystics}>
+    <div
+      className={`${styles.analystics} ${styles.dark}`}
+    >
       <h2>Sales Analystics</h2>
       <div
         className={`${styles.item} ${styles.online}`}
@@ -67,7 +69,7 @@ function Analystics() {
         className={`${styles.item} ${styles.add}`}
       >
         <div className="">
-                  <MdAdd className={ styles.span } />
+          <MdAdd className={styles.span} />
           <h3>Add Product</h3>
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 .container {
   display: flex;
-  margin: 0 1%;
+  margin:0 0% 2% 0%;
   gap: 1.8rem;
 
   // .dark {
@@ -18,7 +18,7 @@
     width: 94%;
   }
   @media screen and (max-width: 768px) {
-    width: 50rem;
+    width: 48rem;
     flex-direction: column;
   }
 }
@@ -34,7 +34,7 @@
     height: 200vh;
     width: 100%;
     box-shadow: 1rem 3rem 4rem $color-light;
-    height: 200vh;
+    height: 250vh;
     padding-right: $card-padding;
     display: none;
     z-index: 99;

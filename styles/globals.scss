@@ -13,15 +13,27 @@ body {
   overflow: none;
   user-select: none;
   color: $color-dark;
-  
+  transition: .5s ease-in-out;
 }
 .dark {
+  background: #181a1e;
+  color: #edeffd;
   $color-background: #181a1e;
   $color-white: #202528;
   $color-dark: #edeffd;
   $color-dark-variant: #a3bdcc;
   $color-light: rgba(0, 0, 0, 0.4);
   $box-shadow: 0 2rem 3rem $color-light;
+  p {
+    color: #edeffd;
+  }
+  b {
+    color: #edeffd;
+  }
+  a {
+    color: #edeffd;
+  }
+  
 }
 
 a {

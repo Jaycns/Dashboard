@@ -15,7 +15,9 @@ function Transaction() {
           More <MdChevronRight className="" />
         </a>
       </div>
-      <div className={styles.transaction}>
+      <div
+        className={`${styles.transaction} ${styles.dark}`}
+      >
         <div className={styles.service}>
           <div
             className={`${styles.icon} ${styles.purple}`}
@@ -49,7 +51,9 @@ function Transaction() {
         <h4>$20</h4>
       </div>
       {/* End of transaction */}
-      <div className={styles.transaction}>
+      <div
+        className={`${styles.transaction} ${styles.dark}`}
+      >
         <div className={styles.service}>
           <div
             className={`${styles.icon} ${styles.dangerA}`}
@@ -80,7 +84,9 @@ function Transaction() {
         <h4>$20</h4>
       </div>
       {/* End of transaction */}
-      <div className={styles.transaction}>
+      <div
+        className={`${styles.transaction} ${styles.dark}`}
+      >
         <div className={styles.service}>
           <div
             className={`${styles.icon} ${styles.successB}`}
@@ -111,7 +117,9 @@ function Transaction() {
         <h4>$20</h4>
       </div>
       {/* End of transaction */}
-      <div className={styles.transaction}>
+      <div
+        className={`${styles.transaction} ${styles.dark}`}
+      >
         <div className={styles.service}>
           <div
             className={`${styles.icon} ${styles.primaryBf}`}

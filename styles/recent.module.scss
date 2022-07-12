@@ -3,7 +3,7 @@
 .recent {
   margin-top: 2rem;
   // width: 90rem;
-  
+
   h2 {
     margin-bottom: 0.8rem;
   }
@@ -59,8 +59,8 @@
   @media screen and (max-width: 768px) {
     width: 100%;
     position: relative;
-    margin: 18rem 0 0 0rem;    
-  
+    margin: 18rem 0 0 0rem;
+
     table {
       width: 100%;
       border-radius: 1rem;
@@ -72,6 +72,18 @@
     tbody tr th:last-child,
     tbody tr td:first-child {
       display: none;
+    }
+  }
+}
+.recent.dark {
+  table {
+    background: #202528;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
+    tbody {
+      td {
+         border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        color: #a3bdcc;
+      }
     }
   }
 }

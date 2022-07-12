@@ -9,11 +9,13 @@ function Investment() {
     timeLet,
     "d MMM ',' yyyy"
   );
-  const timeD = format(timeLet, "h':'mm aaa")
+  const timeD = format(timeLet, "h':'mm aaa");
 
   return (
     <div className={styles.right}>
-      <div className={styles.investments}>
+      <div
+        className={`${styles.investments} ${styles.dark}`}
+      >
         <div className={styles.header}>
           <h2>Investments</h2>
           <a href="#">

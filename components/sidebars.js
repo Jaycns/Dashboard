@@ -43,7 +43,7 @@ export default function SideBar({
     setVal(e.target.getAttribute("name"));
     setTimeout(() => {
       setClick(!click);
-    }, 2000);
+    }, 500);
 
     localStorage.setItem(
       "val",

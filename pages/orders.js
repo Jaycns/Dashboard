@@ -14,7 +14,7 @@ function Orders() {
   return (
     <main className={styles.frag}>
       <h1>Orders {syn} </h1>
-      <div>
+      <div className={styles.fraglin}>
         <Insights />
         <Transactions />
         <Right />

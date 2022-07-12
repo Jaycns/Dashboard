@@ -9,7 +9,7 @@ function Customers() {
   return (
     <main className={`${styles.frag}`}>
       <h1>Customers {syn}</h1>
-      <div>
+      <div className={styles.fraglin}>
         <Right />
         <Transactions />
         <Recent />

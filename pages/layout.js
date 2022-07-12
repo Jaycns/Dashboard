@@ -6,15 +6,22 @@ import styles from "../styles/layout.module.scss";
 function Layout({ children }) {
   const [click, setClick] = useState(false);
 
-
   return (
     <div className={styles.container}>
       <Top click={click} setClick={setClick} />
       <aside
         className={styles.asider}
-        style={{ display: click ? "block" : "" }}
+        style={{
+          display: click ? "block" : "",
+          backgroundColor: "#202528",
+          boxShadow:
+            "1rem 3rem 4rem rgba(0, 0, 0, 0.4)",
+        }}
       >
-        <SideBar click={click} setClick={setClick} />
+        <SideBar
+          click={click}
+          setClick={setClick}
+        />
       </aside>
       <main className={styles.mainer}>
         {children}
