@@ -3,22 +3,22 @@ import {
   useReducer,
   useState,
 } from "react";
-
+const toggleState = false;
 const reducer = (toggler, action) => {
   switch (action.type) {
     case "add":
-      return  true;
+      return (toggleState = true);
     case "remove":
-      return  false;
+      return (toggleState = false);
     default:
-      return false;
+      return toggleState;
   }
 };
 const ThemeContext = createContext();
 export const ThemeProvider = (props) => {
   const [toggler, dispatch] = useReducer(
     reducer,
-     false 
+    toggleState
   );
   const [toggle, setToggle] = useState(false);
 
@@ -50,7 +50,7 @@ export const ThemeProvider = (props) => {
   };
   return (
     <ThemeContext.Provider
-      value={{ theme: toggle, themeToggler, }}
+      value={{ toggleState, themeToggler }}
     >
       {props.children}
     </ThemeContext.Provider>

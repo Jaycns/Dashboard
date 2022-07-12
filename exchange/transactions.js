@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "../styles/exchange/transaction.module.scss";
 import { MdChevronRight } from "react-icons/md";
 import { MdHeadphones } from "react-icons/md";
 import { MdShoppingBag } from "react-icons/md";
 import { MdSportsEsports } from "react-icons/md";
 import { MdRestaurant } from "react-icons/md";
+import ThemeContext from "../context/context";
 
 function Transaction() {
+  const { toggleState } =
+    useContext(ThemeContext);
   return (
     <div className={styles.transactions}>
       <div className={styles.header}>
@@ -16,7 +19,11 @@ function Transaction() {
         </a>
       </div>
       <div
-        className={`${styles.transaction} ${styles.dark}`}
+        className={
+          toggleState
+            ? `${styles.transaction} ${styles.dark}`
+            : styles.transaction
+        }
       >
         <div className={styles.service}>
           <div
@@ -52,7 +59,11 @@ function Transaction() {
       </div>
       {/* End of transaction */}
       <div
-        className={`${styles.transaction} ${styles.dark}`}
+        className={
+          toggleState
+            ? `${styles.transaction} ${styles.dark}`
+            : styles.transaction
+        }
       >
         <div className={styles.service}>
           <div
@@ -85,7 +96,11 @@ function Transaction() {
       </div>
       {/* End of transaction */}
       <div
-        className={`${styles.transaction} ${styles.dark}`}
+        className={
+          toggleState
+            ? `${styles.transaction} ${styles.dark}`
+            : styles.transaction
+        }
       >
         <div className={styles.service}>
           <div
@@ -118,7 +133,11 @@ function Transaction() {
       </div>
       {/* End of transaction */}
       <div
-        className={`${styles.transaction} ${styles.dark}`}
+        className={
+          toggleState
+            ? `${styles.transaction} ${styles.dark}`
+            : styles.transaction
+        }
       >
         <div className={styles.service}>
           <div

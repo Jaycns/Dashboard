@@ -1,8 +1,18 @@
 import styles from "../styles/right.module.scss";
+import ThemeContext from "../context/context";
+import React, { useContext } from "react";
 
 function Right() {
+  const { toggleState } =
+    useContext(ThemeContext);
   return (
-    <div className={`${styles.right} ${styles.dark}`}>
+    <div
+      className={
+        toggleState
+          ? `${styles.right} ${styles.dark}`
+          : styles.right
+      }
+    >
       <div className={styles.recent}>
         <h2>Recent Updates</h2>
         <div className={styles.updates}>

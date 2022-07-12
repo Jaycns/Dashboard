@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, {
+  useState,
+  useContext,
+} from "react";
 import Top from "../components/tops";
 import SideBar from "../components/sidebars";
 import styles from "../styles/layout.module.scss";
+import ThemeContext from "../context/context";
 
 function Layout({ children }) {
   const [click, setClick] = useState(false);
-
+  const { toggleState } =
+    useContext(ThemeContext);
   return (
     <div className={styles.container}>
       <Top click={click} setClick={setClick} />
@@ -13,9 +18,12 @@ function Layout({ children }) {
         className={styles.asider}
         style={{
           display: click ? "block" : "",
-          backgroundColor: "#202528",
-          boxShadow:
-            "1rem 3rem 4rem rgba(0, 0, 0, 0.4)",
+          backgroundColor: toggleState
+            ? "#202528"
+            : "",
+          boxShadow: toggleState
+            ? "1rem 3rem 4rem rgba(0, 0, 0, 0.4)"
+            : "",
         }}
       >
         <SideBar

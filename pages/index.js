@@ -10,10 +10,14 @@ import FastPayment from "../exchange/fastPayment";
 import Canvas from "../exchange/cranvas";
 import Investment from "../exchange/investments";
 import Transaction from "../exchange/transactions";
+import ThemeContext from "../context/context";
+import React, { useContext } from "react";
 
 import { syn } from "./orders.js";
 
 export default function Home() {
+  const { toggleState } =
+    useContext(ThemeContext);
   return (
     <div className={styles.container}>
       <Head>
@@ -40,7 +44,11 @@ export default function Home() {
       <main className={styles}>
         <h1>Dashboard {syn}</h1>
         <div
-          className={`${styles.date} ${styles.dark}`}
+          className={
+            toggleState
+              ? `${styles.date} ${styles.dark}`
+              : styles.date
+          }
         >
           <input type="date" />
         </div>

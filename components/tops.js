@@ -14,16 +14,26 @@ import Nav from "./navi";
 function Top({ setClick, click }) {
   // const { light, dark } =
   //   useContext(ThemeContext);
-  const { themeToggler } =
+  const { themeToggler, toggleState } =
     useContext(ThemeContext);
+  console.log(toggleState);
   //const { toggle } = useContext(ThemeContext);
   const handleOpen = () => setClick(!click);
-  const condition = `${styles.span} ${styles.active}`;
+  const condition = toggleState
+    ? styles.span
+    : `${styles.span} ${styles.active}`;
+  const conditions = toggleState
+    ? `${styles.span} ${styles.active}`
+    : styles.span;
   return (
     <div>
       {" "}
       <div
-        className={`${styles.top} ${styles.dark}`}
+        className={
+          toggleState
+            ? `${styles.top} ${styles.dark}`
+            : styles.top
+        }
         style={{}}
       >
         <Nav />
@@ -42,7 +52,7 @@ function Top({ setClick, click }) {
           onClick={themeToggler}
         >
           <MdLightMode className={condition} />
-          <MdDarkMode className={condition} />
+          <MdDarkMode className={conditions} />
         </div>
         <div className={styles.profile}>
           <div className={styles.info}>

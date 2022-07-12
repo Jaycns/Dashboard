@@ -1,9 +1,17 @@
 import styles from "../styles/recent.module.scss";
+import ThemeContext from "../context/context";
+import React, { useContext } from "react";
 
 function Recent() {
+  const { toggleState } =
+    useContext(ThemeContext);
   return (
     <div
-      className={`${styles.recent} ${styles.dark} `}
+      className={
+        toggleState
+          ? `${styles.recent} ${styles.dark}`
+          : styles.recent
+      }
     >
       <h2>Recent Orders</h2>
       <table>

@@ -5,6 +5,9 @@
   margin-top: 2rem;
   border-radius: $card-border-radius-1;
   padding: $card-padding;
+  @media screen and (max-width: 768px) {
+    width: 15rem;
+  }
 }
 .head {
   margin-top: 2rem;

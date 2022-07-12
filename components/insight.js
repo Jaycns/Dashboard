@@ -1,14 +1,22 @@
-import styles from '../styles/insights.module.scss'
-import { MdAnalytics} from 'react-icons/md'
-import { MdBarChart } from 'react-icons/md'
-import { MdStackedLineChart } from 'react-icons/md'
+import styles from "../styles/insights.module.scss";
+import { MdAnalytics } from "react-icons/md";
+import { MdBarChart } from "react-icons/md";
+import { MdStackedLineChart } from "react-icons/md";
+import ThemeContext from "../context/context";
+import React, { useContext } from "react";
 
 function Insights() {
+  const { toggleState } =
+    useContext(ThemeContext);
   return (
     <div className={styles.insights}>
       <div
         className={styles.sales}
-        style={{ backgroundColor: "#202528" }}
+        style={{
+          backgroundColor: toggleState
+            ? "#202528"
+            : "",
+        }}
       >
         <MdAnalytics
           className={styles.span}
@@ -99,4 +107,4 @@ function Insights() {
   );
 }
 
-export default Insights
+export default Insights;

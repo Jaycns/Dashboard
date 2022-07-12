@@ -1,7 +1,8 @@
 import React, {
   useState,
-  useEffect,
+  useEffect, useContext
 } from "react";
+import ThemeContext from "../context/context";
 import styles from "../styles/exchange/canvas.module.scss";
 import { Line } from "react-chartjs-2";
 import {
@@ -25,7 +26,8 @@ ChartJs.register(
 );
 function Canvas() {
   //create a new chart instance
-
+  const { toggleState } =
+    useContext(ThemeContext);
   const [chartData, setChartData] = useState({
     datasets: [],
   });
@@ -96,7 +98,11 @@ function Canvas() {
           data={chartData}
           options={chartDataOptions}
           className={styles.chart}
-          style={{ backgroundColor: "#202528" }}
+          style={{
+            backgroundColor: toggleState
+              ? "#202528"
+              : "",
+          }}
         />
       </div>
     </>

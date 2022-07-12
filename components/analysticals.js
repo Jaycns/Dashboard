@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "../styles/analystics.module.scss";
 import { MdShoppingCart } from "react-icons/md";
 import { MdLocalMall } from "react-icons/md";
 import { MdAdd } from "react-icons/md";
+import ThemeContext from "../context/context";
 
 function Analystics() {
+  const { toggleState } =
+    useContext(ThemeContext);
   return (
     <div
-      className={`${styles.analystics} ${styles.dark}`}
+      className={
+        toggleState
+          ? `${styles.analystics} ${styles.dark}`
+          : styles.analystics
+      }
     >
       <h2>Sales Analystics</h2>
       <div

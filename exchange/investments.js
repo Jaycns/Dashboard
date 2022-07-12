@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "../styles/exchange/investment.module.scss";
 import { MdChevronRight } from "react-icons/md";
 import { format } from "date-fns";
+import ThemeContext from "../context/context";
 
 function Investment() {
   const timeLet = new Date();
@@ -10,11 +11,16 @@ function Investment() {
     "d MMM ',' yyyy"
   );
   const timeD = format(timeLet, "h':'mm aaa");
-
+  const { toggleState } =
+    useContext(ThemeContext);
   return (
     <div className={styles.right}>
       <div
-        className={`${styles.investments} ${styles.dark}`}
+        className={
+          toggleState
+            ? `${styles.investments} ${styles.dark}`
+            : styles.investments
+        }
       >
         <div className={styles.header}>
           <h2>Investments</h2>

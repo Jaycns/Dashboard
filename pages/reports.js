@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import Canvas from "../exchange/cranvas";
 import styles from "../styles/frag.module.scss";
 import { syn } from "./orders.js";
-
+import ThemeContext from "../context/context";
 function Reports() {
+  const { toggleState } =
+    useContext(ThemeContext);
   return (
     <main className={`${styles.frag}`}>
       <h1>Reports {syn}</h1>
       <div className={styles.fraglin}>
         <div
-          className={`${styles.date} ${styles.dark}`}
+          className={
+            toggleState
+              ? `${styles.date} ${styles.dark}`
+              : styles.date
+          }
         >
           <input type="date" />
         </div>
