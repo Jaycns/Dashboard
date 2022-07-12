@@ -1,13 +1,11 @@
 @use "../props.scss" as *;
 
-.chart{
-    background: $color-white;
-    max-width: 100%;
-    margin-top: 2rem;
-    border-radius: $card-border-radius-1;
-    padding: $card-padding;
+.chart {
+  background: $color-white;
+  margin-top: 2rem;
+  border-radius: $card-border-radius-1;
+  padding: $card-padding;
 }
-.head{
-    margin-top: 2rem;
-    
+.head {
+  margin-top: 2rem;
 }
