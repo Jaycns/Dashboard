@@ -16,12 +16,9 @@ function Top({ setClick, click }) {
   //   useContext(ThemeContext);
   const { themeToggler } =
     useContext(ThemeContext);
-  const { toggle } = useContext(ThemeContext);
+  //const { toggle } = useContext(ThemeContext);
   const handleOpen = () => setClick(!click);
-  const condition = toggle
-    ? styles.span
-    : `${styles.span} ${styles.active}`;
-  console.log(toggle);
+  const condition = `${styles.span} ${styles.active}`;
   return (
     <div>
       {" "}
