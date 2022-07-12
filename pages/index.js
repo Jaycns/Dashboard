@@ -39,7 +39,9 @@ export default function Home() {
       </aside> */}
       <main className={styles}>
         <h1>Dashboard {syn}</h1>
-        <div className={styles.date}>
+        <div
+          className={`${styles.date} ${styles.dark}`}
+        >
           <input type="date" />
         </div>
         <Insights />

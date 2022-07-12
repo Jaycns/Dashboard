@@ -32,6 +32,10 @@ function Top({ setClick, click }) {
         </button>
         <div className={styles.search}>
           <MdSearch />
+          <input
+            type="text"
+            value="What may i help you with..."
+          />
         </div>
         <div
           className={styles.toggler}

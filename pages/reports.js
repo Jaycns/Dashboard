@@ -8,7 +8,9 @@ function Reports() {
     <main className={`${styles.frag}`}>
       <h1>Reports {syn}</h1>
       <div className={styles.fraglin}>
-        <div className={styles.date}>
+        <div
+          className={`${styles.date} ${styles.dark}`}
+        >
           <input type="date" />
         </div>
         <Canvas />

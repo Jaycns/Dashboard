@@ -27,6 +27,9 @@
   height: 100vh;
   margin-top: 5rem;
   position: fixed;
+
+  left: 0%;
+  top: -1%;
   @media screen and (max-width: 768px) {
     position: fixed;
     background: $color-white;

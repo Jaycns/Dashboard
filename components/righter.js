@@ -2,7 +2,7 @@ import styles from "../styles/right.module.scss";
 
 function Right() {
   return (
-    <div className={styles.right}>
+    <div className={`${styles.right} ${styles.dark}`}>
       <div className={styles.recent}>
         <h2>Recent Updates</h2>
         <div className={styles.updates}>

@@ -47,6 +47,13 @@ $box-shadow: 0 2rem 3rem $color-light;
     padding: 0.8rem 3rem 0.8rem 1.2rem;
   }
 }
+.date.dark {
+  background: rgba(0, 0, 0, 0.4);
+input{
+  color: #edeffd;
+}
+}
+
 .primary {
   color: $color-primary;
 }
