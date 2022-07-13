@@ -13,8 +13,6 @@
   z-index: 2;
   box-shadow: 0 1rem 1rem $color-light;
   display: flex;
-  justify-content: flex-end;
-  gap: 2rem;
 
   @media screen and (max-width: 768px) {
     img {
@@ -31,13 +29,24 @@
     align-items: center;
     gap: 1rem;
     color: $color-dark;
-    position: absolute;
-    left: 15%;
     font-size: 1rem;
+    margin: 0 10rem;
     @media screen and (max-width: 768px) {
-      left: 27%;
-      width: 16rem;
-      height: 1rem;
+      width: 20rem;
+      height: 3rem;
+      margin: 0 4rem;
+    }
+    @media screen and (max-width: 750px) {
+      width: 14rem;
+      height: 3rem;
+      margin: 0 2rem;
+     
+    }
+    @media screen and (max-width: 650px) {
+      width: 14rem;
+      height: 3rem;
+      margin: 0 1rem;
+     
     }
     input {
       width: 100%;
@@ -48,7 +57,13 @@
       font-size: 1.2rem;
     }
   }
-
+  .end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 1%;
+  }
   .toggler {
     width: 4.4rem;
     background: $color-light;
@@ -59,7 +74,16 @@
     width: 4.5rem;
     cursor: pointer;
     border-radius: $border-radius-1;
-
+    margin: 0rem 2.5rem;
+    @media screen and (max-width: 768px) {
+      margin: 0rem 1.5rem;
+    }
+    @media screen and (max-width: 750px) {
+      margin: 0rem 1rem;
+    }
+    @media screen and (max-width: 650px) {
+      margin: 0rem .5rem;
+    }
     .span {
       font-size: 1.2rem;
       width: 50%;
@@ -84,6 +108,7 @@
     color: $color-dark;
     position: relative;
     font-size: 2.5rem;
+    margin-left: 1.5rem;
     .span {
       font-size: 2rem;
     }

@@ -60,29 +60,31 @@ function Top({ setClick, click }) {
             value={inputVal}
           />
         </form>
-        <div
-          className={styles.toggler}
-          onClick={themeToggler}
-        >
-          <MdLightMode className={condition} />
-          <MdDarkMode className={conditions} />
-        </div>
-        <div className={styles.profile}>
-          <div className={styles.info}>
-            <p>
-              Hey, <b>Jaycn</b>
-            </p>
-            <small className={styles.muted}>
-              Admin
-            </small>
+        <div className={styles.end}>
+          <div
+            className={styles.toggler}
+            onClick={themeToggler}
+          >
+            <MdLightMode className={condition} />
+            <MdDarkMode className={conditions} />
           </div>
-          <div className={styles.photo}>
-            <img
-              width="50px"
-              height="50px"
-              src="/asset/jaycn_pics.png"
-              alt="Here"
-            />
+          <div className={styles.profile}>
+            <div className={styles.info}>
+              <p>
+                Hey, <b>Jaycn</b>
+              </p>
+              <small className={styles.muted}>
+                Admin
+              </small>
+            </div>
+            <div className={styles.photo}>
+              <img
+                width="50px"
+                height="50px"
+                src="/asset/jaycn_pics.png"
+                alt="Here"
+              />
+            </div>
           </div>
         </div>
       </div>

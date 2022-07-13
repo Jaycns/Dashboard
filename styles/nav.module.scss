@@ -4,13 +4,14 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 1.4rem;
-  position: absolute;
-  left: 1%;
 }
 .btn {
   font-size: 25px;
   margin-left: 1.4rem;
   display: none;
+  @media screen and (max-width: 650px) {
+     margin-left: 1rem;
+  }
 }
 .logo {
   display: flex;
