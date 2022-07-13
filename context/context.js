@@ -30,15 +30,21 @@ export const ThemeProvider = (props) => {
       document.body.classList.remove("dark");
     }
   };
+  const [modal, setModal] = useState(false);
+  const handleOpen = () => setModal(true);
+  const handleClose = () => setModal(false);
   const stateActions = {
     themeToggler,
     setVal,
+    handleOpen,
+    handleClose,
   };
   return (
     <ThemeContext.Provider
       value={{
         toggleState,
         val,
+        modal,
         ...stateActions,
       }}
     >

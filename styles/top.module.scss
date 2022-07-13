@@ -29,25 +29,26 @@
     align-items: center;
     gap: 1rem;
     color: $color-dark;
-    font-size: 1rem;
+    font-size: 2rem;
     margin: 0 10rem;
+    //  @media screen and (max-width: 750px) {
+    //   width: 14rem;
+    //   height: 3rem;
+    //   margin: 0 2rem;
+     
+    // }
+    // @media screen and (min-width: 650px) {
+    //   width: 14rem;
+    //   height: 3rem;
+    //   margin: 0 1rem;
+     
+    // }
     @media screen and (max-width: 768px) {
       width: 20rem;
       height: 3rem;
       margin: 0 4rem;
     }
-    @media screen and (max-width: 750px) {
-      width: 14rem;
-      height: 3rem;
-      margin: 0 2rem;
-     
-    }
-    @media screen and (max-width: 650px) {
-      width: 14rem;
-      height: 3rem;
-      margin: 0 1rem;
-     
-    }
+   
     input {
       width: 100%;
       background: transparent;
@@ -78,12 +79,12 @@
     @media screen and (max-width: 768px) {
       margin: 0rem 1.5rem;
     }
-    @media screen and (max-width: 750px) {
-      margin: 0rem 1rem;
-    }
-    @media screen and (max-width: 650px) {
-      margin: 0rem .5rem;
-    }
+    // @media screen and (max-width: 750px) {
+    //   margin: 0rem 1rem;
+    // }
+    // @media screen and (max-width: 650px) {
+    //   margin: 0rem .5rem;
+    // }
     .span {
       font-size: 1.2rem;
       width: 50%;

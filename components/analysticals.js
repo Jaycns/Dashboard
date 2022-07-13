@@ -6,7 +6,7 @@ import { MdAdd } from "react-icons/md";
 import ThemeContext from "../context/context";
 
 function Analystics() {
-  const { toggleState } =
+  const { toggleState, modal, handleOpen } =
     useContext(ThemeContext);
   return (
     <div
@@ -75,7 +75,7 @@ function Analystics() {
       <div
         className={`${styles.item} ${styles.add}`}
       >
-        <div className="">
+        <div className="" onClick={handleOpen}>
           <MdAdd className={styles.span} />
           <h3>Add Product</h3>
         </div>

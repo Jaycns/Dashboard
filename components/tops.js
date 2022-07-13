@@ -16,7 +16,6 @@ function Top({ setClick, click }) {
   //   useContext(ThemeContext);
   const { themeToggler, toggleState, val } =
     useContext(ThemeContext);
-  console.log(val);
   //const { toggle } = useContext(ThemeContext);
   const handleOpen = () => setClick(!click);
   const condition = toggleState

@@ -23,7 +23,7 @@ export default function SideBar({
   setClick,
 }) {
   let initialVal = "";
-  const { val, setVal } =
+  const { val, setVal, modal, handleOpen } =
     useContext(ThemeContext);
   useEffect(() => {
     if (JSON.parse(localStorage.getItem("val"))) {
@@ -195,7 +195,10 @@ export default function SideBar({
             <h3>Settings</h3>
           </a>
         </Link>
-        <Link href="/">
+        <Link
+          as="/addProducts"
+          href="/addProducts"
+        >
           <a
             name="Add Products"
             onClick={handleClick}

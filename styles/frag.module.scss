@@ -20,4 +20,23 @@
       width: 48rem;
     }
   }
+  .form {
+    display: grid;
+    grid-template-columns: 2fr 40rem;
+    gap: 2rem;
+    width: 100%;
+  }
+  label {
+    font-size: 1.2rem;
+  }
+  input {
+    background: $color-light;
+    padding: $padding-2 $card-padding;
+    color: $color-dark;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: $border-radius-1;
+  }
 }
