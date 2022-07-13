@@ -20,7 +20,9 @@ function Insights() {
       >
         <MdAnalytics
           className={styles.span}
-          style={{ color: "#202528" }}
+          style={{
+            color: toggleState ? "#202528" : "",
+          }}
         />
         <div className={styles.middle}>
           <div className={styles.left}>
@@ -47,7 +49,11 @@ function Insights() {
       </div>
       <div
         className={styles.expenses}
-        style={{ backgroundColor: "#202528" }}
+        style={{
+          backgroundColor: toggleState
+            ? "#202528"
+            : "",
+        }}
       >
         <MdBarChart className={styles.span} />
         <div className={styles.middle}>
@@ -75,7 +81,11 @@ function Insights() {
       </div>
       <div
         className={styles.income}
-        style={{ backgroundColor: "#202528" }}
+        style={{
+          backgroundColor: toggleState
+            ? "#202528"
+            : "",
+        }}
       >
         <MdStackedLineChart
           className={styles.span}

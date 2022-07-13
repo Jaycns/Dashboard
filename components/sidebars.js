@@ -10,15 +10,21 @@ import { MdSettings } from "react-icons/md";
 import { MdAdd } from "react-icons/md";
 import { MdLogout } from "react-icons/md";
 import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import {
+  useState,
+  useEffect,
+  useContext,
+} from "react";
 import Link from "next/link";
+import ThemeContext from "../context/context";
 
 export default function SideBar({
   click,
   setClick,
 }) {
-  const [val, setVal] = useState("Dashboard");
   let initialVal = "";
+  const { val, setVal } =
+    useContext(ThemeContext);
   useEffect(() => {
     if (JSON.parse(localStorage.getItem("val"))) {
       setVal(
@@ -80,10 +86,10 @@ export default function SideBar({
         </Link>
         <Link as="/customers" href="/customers">
           <a
-            name="/customers"
+            name="Customers"
             onClick={handleClick}
             className={
-              val === "/customers"
+              val === "Customers"
                 ? styles.active
                 : ""
             }
@@ -96,10 +102,10 @@ export default function SideBar({
         </Link>
         <Link as="/orders" href="/orders">
           <a
-            name="orders"
+            name="Orders"
             onClick={handleClick}
             className={
-              val === "orders" && styles.active
+              val === "Orders" && styles.active
             }
           >
             <MdReceiptLong
@@ -110,10 +116,10 @@ export default function SideBar({
         </Link>
         <Link as="/analysts" href="/analysts">
           <a
-            name="analysts"
+            name="Analystics"
             onClick={handleClick}
             className={
-              val === "analysts"
+              val === "Analystics"
                 ? styles.active
                 : ""
             }
@@ -126,10 +132,10 @@ export default function SideBar({
         </Link>
         <Link as="/messages" href="/messages">
           <a
-            name="messages"
+            name="Messages"
             onClick={handleClick}
             className={
-              val === "messages"
+              val === "Messages"
                 ? styles.active
                 : ""
             }
@@ -145,10 +151,10 @@ export default function SideBar({
         </Link>
         <Link as="/products" href="/products">
           <a
-            name="products"
+            name="Products"
             onClick={handleClick}
             className={
-              val === "products"
+              val === "Products"
                 ? styles.active
                 : ""
             }
@@ -161,10 +167,10 @@ export default function SideBar({
         </Link>
         <Link as="/reports" href="/reports">
           <a
-            name="reports"
+            name="Reports"
             onClick={handleClick}
             className={
-              val === "reports"
+              val === "Reports"
                 ? styles.active
                 : ""
             }
@@ -177,10 +183,10 @@ export default function SideBar({
         </Link>
         <Link href="/">
           <a
-            name="settings"
+            name="Settings"
             onClick={handleClick}
             className={
-              val === "settings"
+              val === "Settings"
                 ? styles.active
                 : ""
             }

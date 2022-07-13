@@ -14,9 +14,9 @@ import Nav from "./navi";
 function Top({ setClick, click }) {
   // const { light, dark } =
   //   useContext(ThemeContext);
-  const { themeToggler, toggleState } =
+  const { themeToggler, toggleState, val } =
     useContext(ThemeContext);
-  console.log(toggleState);
+  console.log(val);
   //const { toggle } = useContext(ThemeContext);
   const handleOpen = () => setClick(!click);
   const condition = toggleState
@@ -25,6 +25,14 @@ function Top({ setClick, click }) {
   const conditions = toggleState
     ? `${styles.span} ${styles.active}`
     : styles.span;
+  const [inputVal, setInputVal] = useState(null);
+  const handleChange = (e) => {
+    setInputVal(e.target.value);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setInputVal("");
+  };
   return (
     <div>
       {" "}
@@ -40,13 +48,18 @@ function Top({ setClick, click }) {
         <button onClick={handleOpen}>
           <MdMenu />
         </button>
-        <div className={styles.search}>
+        <form
+          className={styles.search}
+          onSubmit={handleSubmit}
+        >
           <MdSearch />
           <input
             type="text"
-            value="What may i help you with..."
+            placeholder={`${val}...`}
+            onChange={handleChange}
+            value={inputVal}
           />
-        </div>
+        </form>
         <div
           className={styles.toggler}
           onClick={themeToggler}

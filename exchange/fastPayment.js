@@ -1,21 +1,32 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "../styles/exchange/fastPayment.module.scss";
 import { MdAdd } from "react-icons/md";
+import ThemeContext from "../context/context";
 
 function FastPayment() {
+  const { toggleState } =
+    useContext(ThemeContext);
   return (
     <div className={styles.payment}>
       <h2>Fast Payment</h2>
       <div className={styles.badges}>
         <div
           className={styles.badge}
-          style={{ backgroundColor: "#202528" }}
+          style={{
+            backgroundColor: toggleState
+              ? "#202528"
+              : "",
+          }}
         >
           <MdAdd className={styles.span} />
         </div>
         <div
           className={styles.badge}
-          style={{ backgroundColor: "#202528" }}
+          style={{
+            backgroundColor: toggleState
+              ? "#202528"
+              : "",
+          }}
         >
           <span
             className={styles.primaryB}
@@ -27,7 +38,11 @@ function FastPayment() {
         </div>
         <div
           className={styles.badge}
-          style={{ backgroundColor: "#202528" }}
+          style={{
+            backgroundColor: toggleState
+              ? "#202528"
+              : "",
+          }}
         >
           <span
             className={styles.warningB}
@@ -39,7 +54,11 @@ function FastPayment() {
         </div>
         <div
           className={styles.badge}
-          style={{ backgroundColor: "#202528" }}
+          style={{
+            backgroundColor: toggleState
+              ? "#202528"
+              : "",
+          }}
         >
           <span className={styles.dangerB}></span>
           <div className="">
@@ -49,7 +68,11 @@ function FastPayment() {
         </div>
         <div
           className={styles.badge}
-          style={{ backgroundColor: "#202528" }}
+          style={{
+            backgroundColor: toggleState
+              ? "#202528"
+              : "",
+          }}
         >
           <span
             className={styles.successB}
@@ -61,7 +84,11 @@ function FastPayment() {
         </div>
         <div
           className={styles.badge}
-          style={{ backgroundColor: "#202528" }}
+          style={{
+            backgroundColor: toggleState
+              ? "#202528"
+              : "",
+          }}
         >
           <span
             className={styles.warningB}
@@ -73,7 +100,11 @@ function FastPayment() {
         </div>
         <div
           className={styles.badge}
-          style={{ backgroundColor: "#202528" }}
+          style={{
+            backgroundColor: toggleState
+              ? "#202528"
+              : "",
+          }}
         >
           <span
             className={styles.primaryB}
@@ -85,7 +116,11 @@ function FastPayment() {
         </div>
         <div
           className={styles.badge}
-          style={{ backgroundColor: "#202528" }}
+          style={{
+            backgroundColor: toggleState
+              ? "#202528"
+              : "",
+          }}
         >
           <span
             className={styles.primaryB}

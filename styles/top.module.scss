@@ -24,7 +24,7 @@
   }
   .search {
     background: $color-light;
-    padding: $padding-1 $card-padding;
+    padding: $padding-2 $card-padding;
     width: 32vw;
     border-radius: $border-radius-1;
     display: flex;
@@ -39,8 +39,16 @@
       width: 16rem;
       height: 1rem;
     }
+    input {
+      width: 100%;
+      background: transparent;
+      color: $color-dark;
+      outline: none;
+      border: none;
+      font-size: 1.2rem;
+    }
   }
-  
+
   .toggler {
     width: 4.4rem;
     background: $color-light;
@@ -94,6 +102,9 @@
   .search {
     color: #edeffd;
     background: rgba(0, 0, 0, 0.4);
+    input {
+      color: #edeffd;
+    }
   }
   .toggler {
     background: rgba(0, 0, 0, 0.4);

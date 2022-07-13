@@ -3,6 +3,7 @@ import Canvas from "../exchange/cranvas";
 import styles from "../styles/frag.module.scss";
 import { syn } from "./orders.js";
 import ThemeContext from "../context/context";
+import Transaction from "../exchange/transactions";
 function Reports() {
   const { toggleState } =
     useContext(ThemeContext);
@@ -19,6 +20,7 @@ function Reports() {
         >
           <input type="date" />
         </div>
+        <Transaction />
         <Canvas />
       </div>
     </main>

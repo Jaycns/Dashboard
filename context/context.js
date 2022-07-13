@@ -20,37 +20,27 @@ export const ThemeProvider = (props) => {
     reducer,
     toggleState
   );
-  const [toggle, setToggle] = useState(false);
-
+  const [val, setVal] = useState("Dashboard");
   const themeToggler = () => {
     if (!toggler) {
       dispatch({ type: "add" });
       document.body.classList.add("dark");
-      setToggle(!toggle);
     } else {
       dispatch({ type: "remove" });
       document.body.classList.remove("dark");
     }
   };
   const stateActions = {
-    // light: {
-    //   colorBg: "#f6f6f9",
-    //   colorWhite: "#fff",
-    //   colorDark: "#363949",
-    //   colorDarkVar: "#677483",
-    //   colorLight: "rgba(132, 139, 200, 0.18)",
-    // },
-    // dark: {
-    //   colorBg: "#181a1e",
-    //   colorWhite: "#202528",
-    //   colorDark: "#edeffd",
-    //   colorDarkVar: "#a3bdcc",
-    //   colorLight: "rgba(0, 0, 0, 0.4)",
-    // },
+    themeToggler,
+    setVal,
   };
   return (
     <ThemeContext.Provider
-      value={{ toggleState, themeToggler }}
+      value={{
+        toggleState,
+        val,
+        ...stateActions,
+      }}
     >
       {props.children}
     </ThemeContext.Provider>
