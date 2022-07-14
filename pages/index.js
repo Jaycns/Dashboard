@@ -10,13 +10,15 @@ import FastPayment from "../exchange/fastPayment";
 import Canvas from "../exchange/cranvas";
 import Investment from "../exchange/investments";
 import Transaction from "../exchange/transactions";
+import ProductModal from "../components/myModal";
 import ThemeContext from "../context/context";
 import React, { useContext } from "react";
+import { Modal } from "@mui/material";
 
 import { syn } from "./orders.js";
 
 export default function Home() {
-  const { toggleState } =
+  const { toggleState, modal, handleClose } =
     useContext(ThemeContext);
   return (
     <div className={styles.container}>
@@ -41,7 +43,10 @@ export default function Home() {
           handleClick={handleClick}
         />
       </aside> */}
-      <main className={styles}>
+      <main
+        className={styles}
+        onClick={handleClose}
+      >
         <h1>Dashboard {syn}</h1>
         <div
           className={
@@ -52,6 +57,16 @@ export default function Home() {
         >
           <input type="date" />
         </div>
+
+        <Modal
+          open={modal}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <ProductModal />
+        </Modal>
+
         <Insights />
 
         <Exchange />

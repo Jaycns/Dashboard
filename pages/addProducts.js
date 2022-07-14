@@ -35,14 +35,6 @@ function AddProducts() {
             />
           </div>
           <div className={styles.las}>
-            <label>Updated:</label>
-            <input
-              placeholder="Last 2 hours"
-              value=""
-              type="text"
-            />
-          </div>
-          <div className={styles.las}>
             <label>Sales Profit:</label>
             <input
               placeholder="+29%"
@@ -50,6 +42,15 @@ function AddProducts() {
               type="text"
             />
           </div>
+          <div className={styles.las}>
+            <label>Updated:</label>
+            <input
+              placeholder="Last 2 hours"
+              value=""
+              type="text"
+            />
+          </div>
+
           <div className={styles.las}>
             <label>Sales ID:</label>
             <input

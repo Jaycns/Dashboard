@@ -110,96 +110,11 @@
       cursor: pointer;
     }
   }
-}
-@media screen and (max-width: 768px) {
-  // .links {
-  //   position: fixed;
-  //   background: $color-background;
-  //   height: 200vh;
-  //   width: 100%;
-  //   flex-direction: column;
-  //   clip-path: circle(100px at 90% -10%);
-  //   -webkit-clip-path: circle(100px at 90% -10%);
-  //   transition: all 0.5s ease-in;
-  //   align-items: center;
-  //   justify-content: space-around;
-  // }
-  // .open {
-  //   position: fixed;
-  //   background: $color-background;
-  //   height: 200vh;
-  //   width: 100%;
-  //   flex-direction: column;
-  //   clip-path: circle(1300px at 90% -10%);
-  //   -webkit-clip-path: circle(
-  //     1300rem at 90% -10%
-  //   );
-  //   transition: all 1s ease-out;
-  //   pointer-events: all;
-  // }
-  // .open {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
-  //   flex-direction: column;
-  // }
-  // .open a {
-  //   opacity: 1;
-  //   &:first-child {
-  //     transition: all 0.5s ease-in-out 0.2s;
-  //   }
-  //   &:nth-child(2) {
-  //     transition: all 0.5s ease-in-out 0.4s;
-  //   }
-  //   &:nth-child(3) {
-  //     transition: all 0.5s ease-in-out 0.8s;
-  //   }
-  //   &:nth-child(4) {
-  //     transition: all 0.5s ease-in-out 1s;
-  //   }
-  //   &:nth-child(5) {
-  //     transition: all 0.5s ease-in-out 1.2s;
-  //   }
-  //   &:nth-child(6) {
-  //     transition: all 0.5s ease-in-out 1.4s;
-  //   }
-  //   &:nth-child(7) {
-  //     transition: all 0.5s ease-in-out 1.6s;
-  //   }
-  //   &:nth-child(8) {
-  //     transition: all 0.5s ease-in-out 1.8s;
-  //   }
-  //   &:nth-child(9) {
-  //     transition: all 0.5s ease-in-out 2s;
-  //   }
-  //   &:last-child {
-  //     transition: all 0.5s ease 2.2s;
-  //   }
-  // }
-  // .links a {
-  //   opacity: 0;
-  // }
-
-  /* li.fade {
-    opacity: 1;
-  } */
-  .nav {
-    position: relative;
-  }
-  .lcon {
-    position: absolute;
-    right: 5%;
-    top: 5%;
-    transform: translate(-5%, -50%);
-    z-index: 3;
-  }
-  .line {
-    width: 30px;
-    height: 3px;
-    background: #fff;
-    margin: 3px;
-  }
-  .landing {
-    flex-direction: column;
-  }
+   @media screen and (max-width: 400px) {
+    a {
+      &:last-child {
+        bottom: -5rem;
+      }
+    }
+   }
 }

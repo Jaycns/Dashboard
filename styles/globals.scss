@@ -13,7 +13,7 @@ body {
   overflow: none;
   user-select: none;
   color: $color-dark;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .dark {
   background: #181a1e;
@@ -33,7 +33,6 @@ body {
   a {
     color: #edeffd;
   }
-  
 }
 
 a {
@@ -48,6 +47,11 @@ a {
   appearance: none;
   list-style: none;
   text-decoration: none;
+}
+input[type="text"],
+select:focus,
+textarea {
+  font-size: 16px;
 }
 img {
   display: block;
