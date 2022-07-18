@@ -80,7 +80,7 @@ function Analystics() {
 
       {state.map((items, index) => {
         return (
-          <div
+          <div key={index}
             className={`${styles.item} ${styles.customers}`}
             onClick={handleChecked}
           >
