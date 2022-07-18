@@ -43,10 +43,7 @@ export default function Home() {
           handleClick={handleClick}
         />
       </aside> */}
-      <main
-        className={styles}
-        onClick={handleClose}
-      >
+      <main className={styles}>
         <h1>Dashboard {syn}</h1>
         <div
           className={
@@ -64,7 +61,9 @@ export default function Home() {
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
-          <ProductModal />
+          <div>
+            <ProductModal />
+          </div>
         </Modal>
 
         <Insights />

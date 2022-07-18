@@ -29,6 +29,9 @@
     border: none;
     font-size: 16px;
     border-radius: $border-radius-1;
+    &:focus {
+      border: 1px solid $color-primary;
+    }
   }
   button {
     background: $color-primary;
@@ -44,6 +47,24 @@
     letter-spacing: 0.3rem;
     &:hover {
       background: $color-danger;
+    }
+  }
+  .btn {
+    width: 10rem;
+    display: flex;
+    .btn1 {
+      margin-right: 0;
+      background: $color-danger;
+      &:hover {
+        background: $color-danger-1;
+      }
+    }
+    .btn2 {
+      margin-left: 1.5rem;
+
+      &:hover {
+        background: $color-success;
+      }
     }
   }
   @media screen and (max-width: 1200px) {
@@ -62,7 +83,18 @@
   background: #202528;
   input {
     background: rgba(0, 0, 0, 0.4);
+    color: #fff;
   }
   button {
+    background: $color-danger-1;
+    &:hover {
+      background: rgba(0, 0, 0, 0.4);
+    }
+  }
+  .btn2 {
+    background: $color-primary;
+    &:hover {
+      background: $color-primary-light;
+    }
   }
 }

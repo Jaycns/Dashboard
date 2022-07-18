@@ -2,49 +2,153 @@ import {
   createContext,
   useReducer,
   useState,
+  useEffect,
 } from "react";
-const toggleState = false;
-const reducer = (toggler, action) => {
+const initialState = {
+  title: "",
+  icon: "",
+  info: "",
+  profit: "",
+  update: "",
+  id: "",
+};
+const reducer = (state, action) => {
   switch (action.type) {
-    case "add":
-      return (toggleState = true);
-    case "remove":
-      return (toggleState = false);
+    case "addName":
+      return [...state, action.payload.names];
+    case "delete":
+      return state.filter(
+        (item) => item.id !== action.payload.id
+      );
+
+    case "edit":
+      return {
+        ...action.payload.names,
+        title: state.title,
+        icon: state.icon,
+        info: state.info,
+        profit: state.profit,
+        update: state.update,
+        id: state.id,
+      };
     default:
-      return toggleState;
+      return state;
   }
 };
+
 const ThemeContext = createContext();
 export const ThemeProvider = (props) => {
-  const [toggler, dispatch] = useReducer(
+  const initialStateList = [];
+  const [state, dispatch] = useReducer(
     reducer,
-    toggleState
+    initialStateList
   );
+  const [toggleState, setToggleState] =
+    useState(false);
   const [val, setVal] = useState("Dashboard");
   const themeToggler = () => {
-    if (!toggler) {
-      dispatch({ type: "add" });
+    if (!toggleState) {
+      setToggleState(true);
+      localStorage.setItem(
+        "toggleState",
+        JSON.stringify(toggleState)
+      );
       document.body.classList.add("dark");
     } else {
-      dispatch({ type: "remove" });
+      setToggleState(false);
       document.body.classList.remove("dark");
     }
   };
+  const [names, setNames] =
+    useState(initialState);
   const [modal, setModal] = useState(false);
+  const [checked, setChecked] = useState(false);
   const handleOpen = () => setModal(true);
   const handleClose = () => setModal(false);
+  const handleSubmit = (e) => e.preventDefault();
+  const handleChange = (e) => {
+    const { value, name } = e.target;
+    setNames({ ...names, [name]: value });
+  };
+  const handleClick = () => {
+    dispatch({
+      type: "addName",
+      payload: { names: names },
+    });
+    setNames(initialState);
+    setModal(false);
+    localStorage.setItem(
+      "state",
+      JSON.stringify([...state, names])
+    );
+    console.log(names, state);
+  };
+  const handleDelete = () => {
+    dispatch({
+      type: "delete",
+      payload: { id: state.id },
+    });
+  };
+  const handleChecked = () => {
+    setChecked(true);
+    setModal(true);
+  };
+  useEffect(() => {
+    if (JSON.parse(localStorage.getItem("val"))) {
+      setVal(
+        JSON.parse(
+          localStorage.getItem("val") ||
+            "Dashboard"
+        )
+      );
+    }
+  }, []);
+  useEffect(() => {
+    if (
+      JSON.parse(localStorage.getItem("state"))
+    ) {
+      initialStateList = JSON.parse(
+        localStorage.getItem("state") || []
+      );
+      return initialStateList;
+    }
+  }, []);
+
+  useEffect(() => {
+    if (val !== "Dashboard") {
+      localStorage.setItem(
+        "val",
+        JSON.stringify(val)
+      );
+    }
+  }, [val]);
+  useEffect(() => {
+    if (state !== []) {
+      localStorage.setItem(
+        "state",
+        JSON.stringify(state)
+      );
+    }
+  }, [state]);
+
   const stateActions = {
     themeToggler,
     setVal,
     handleOpen,
     handleClose,
+    handleSubmit,
+    handleChange,
+    handleClick,
+    handleChecked,
   };
   return (
     <ThemeContext.Provider
       value={{
+        state,
         toggleState,
         val,
         modal,
+        names, checked,
         ...stateActions,
       }}
     >

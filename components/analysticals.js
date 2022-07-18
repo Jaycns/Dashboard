@@ -6,8 +6,13 @@ import { MdAdd } from "react-icons/md";
 import ThemeContext from "../context/context";
 
 function Analystics() {
-  const { toggleState, handleOpen, val } =
-    useContext(ThemeContext);
+  const {
+    toggleState,
+    handleOpen,
+    val,
+    state,
+    handleChecked,
+  } = useContext(ThemeContext);
   return (
     <div
       className={
@@ -72,9 +77,38 @@ function Analystics() {
           <h3>849</h3>
         </div>
       </div>
+
+      {state.map((items, index) => {
+        return (
+          <div
+            className={`${styles.item} ${styles.customers}`}
+            onClick={handleChecked}
+          >
+            <div className={styles.icon}>
+              <MdShoppingCart
+                className={styles.span}
+              />
+            </div>
+            <div className={styles.right}>
+              <div className={styles.info}>
+                <h3>{items.info}</h3>
+                <small className={styles.muted}>
+                  {items.update}
+                </small>
+              </div>
+              <h5 className={styles.warning}>
+                {items.profit}
+              </h5>
+              <h3>{items.id}</h3>
+            </div>
+          </div>
+        );
+      })}
       <div
         onClick={
-          val === "Add Products" ? null : handleOpen
+          val === "Add Products"
+            ? null
+            : handleOpen
         }
         className={`${styles.item} ${styles.add}`}
       >

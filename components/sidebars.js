@@ -23,26 +23,9 @@ export default function SideBar({
   setClick,
 }) {
   let initialVal = "";
-  const { val, setVal, modal, handleOpen } =
+  const { val, setVal} =
     useContext(ThemeContext);
-  useEffect(() => {
-    if (JSON.parse(localStorage.getItem("val"))) {
-      setVal(
-        JSON.parse(
-          localStorage.getItem("val") ||
-            "Dashboard"
-        )
-      );
-    }
-  }, []);
-  useEffect(() => {
-    if (val !== "Dashboard") {
-      localStorage.setItem(
-        "val",
-        JSON.stringify(val)
-      );
-    }
-  }, [val]);
+
 
   console.log(initialVal);
   function handleClick(e) {
