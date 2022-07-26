@@ -27,12 +27,23 @@
     width: 100%;
     outline: none;
     border: none;
-    font-size: 16px;
+    font-size: 18px;
     border-radius: $border-radius-1;
     &:focus {
-      border: 1px solid $color-primary;
+      border: 2px solid $color-primary;
     }
   }
+  .select {
+    background: transparent;
+    border: none;
+    border-bottom: 1.5px solid $color-primary;
+    width: 100%;
+    padding: $padding-2;
+    font-family: Poppins;
+    font-size: 18px;
+    color: $color-dark;
+  }
+
   button {
     background: $color-primary;
     padding: $padding-2 $card-padding;
@@ -96,5 +107,13 @@
     &:hover {
       background: $color-primary-light;
     }
+  }
+  .select {
+    color: #fff;
+    border-bottom: 2px solid $color-success;
+    padding: $padding-2;
+  }
+  select {
+    background: rgba(0, 0, 0, 0.4);
   }
 }

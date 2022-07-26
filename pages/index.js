@@ -12,14 +12,21 @@ import Investment from "../exchange/investments";
 import Transaction from "../exchange/transactions";
 import ProductModal from "../components/myModal";
 import ThemeContext from "../context/context";
-import React, { useContext } from "react";
+import React, {
+  useContext,
+} from "react";
 import { Modal } from "@mui/material";
+import { format } from "date-fns";
 
 import { syn } from "./orders.js";
 
 export default function Home() {
   const { toggleState, modal, handleClose } =
     useContext(ThemeContext);
+  const defaultDate = format(
+    new Date(),
+    "MM/dd/yyyy"
+  );
   return (
     <div className={styles.container}>
       <Head>
@@ -52,7 +59,7 @@ export default function Home() {
               : styles.date
           }
         >
-          <input type="date" />
+          <input type="date" value={dateVal} />
         </div>
 
         <Modal

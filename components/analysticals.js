@@ -11,6 +11,7 @@ function Analystics() {
     handleOpen,
     val,
     state,
+    names,
     handleChecked,
   } = useContext(ThemeContext);
   return (
@@ -80,14 +81,13 @@ function Analystics() {
 
       {state.map((items, index) => {
         return (
-          <div key={index}
+          <div
+            key={items.id}
             className={`${styles.item} ${styles.customers}`}
-            onClick={handleChecked}
+            onClick={() => handleChecked(items.id)}
           >
             <div className={styles.icon}>
-              <MdShoppingCart
-                className={styles.span}
-              />
+              {items.icon}
             </div>
             <div className={styles.right}>
               <div className={styles.info}>

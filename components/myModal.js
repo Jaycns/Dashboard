@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import styles from "../styles/myModal.module.scss";
 import ThemeContext from "../context/context";
+import { MdShoppingCart } from "react-icons/md";
+import { MdLocalMall } from "react-icons/md";
+import Select from "react-select";
 
 function ProductModal() {
   const {
@@ -9,8 +12,26 @@ function ProductModal() {
     names,
     handleSubmit,
     handleClick,
-    handleChange, checked
+    handleChange,
+    checked,
+    handleDelete,
+    handleSave,
   } = useContext(ThemeContext);
+  const options = [
+    {
+      value: "chocolate",
+      label: <MdShoppingCart />,
+    },
+    {
+      value: "strawberry",
+      label: <MdShoppingCart />,
+    },
+    { value: "vanilla", label: <MdLocalMall /> },
+  ];
+  const value = options.value;
+  const selectedOption = options.find(
+    (option) => option.value === value
+  );
 
   return (
     <div
@@ -40,15 +61,35 @@ function ProductModal() {
           />
         </div>
         <div className={styles.icon}>
-          <label> Icon:</label>
-          <input
-            placeholder="Select Icon"
-            value={names.icon}
-            type="select"
-            name="icon"
+          <label>Icon:</label>
+          {/* <select
+            className={styles.select}
+            placeholder="ICONS"
             onChange={handleChange}
+            value={names.icon}
+            name="icon"
+          >
+            <option>Hats</option>
+            <option>Banana</option>
+            <option>Saucy</option>
+            <option>Football</option>
+            <option>
+              <MdLocalMall
+                style={{ color: "black" }}
+              />
+            </option>
+            <option>
+              <MdShoppingCart />
+            </option>
+          </select> */}
+          <Select
+            options={options}
+            className={styles.select}
+            value={selectedOption}
+            handleChange={(e, selectedOption) =>
+              e.target.selectedOption.value
+            }
           />
-          <options></options>
         </div>
         <div className={styles.info}>
           <label>Info:</label>
@@ -91,19 +132,19 @@ function ProductModal() {
           />
         </div>
 
-        {checked? (
+        {checked ? (
           <div className={styles.btn}>
             <button
               className={styles.btn1}
               type="button"
-              onClick={handleClick}
+              onClick={handleDelete}
             >
               DELETE
             </button>
             <button
               className={styles.btn2}
               type="button"
-              onClick={handleClick}
+              onClick={handleSave}
             >
               SAVE
             </button>

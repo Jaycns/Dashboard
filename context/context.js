@@ -22,15 +22,12 @@ const reducer = (state, action) => {
       );
 
     case "edit":
-      return {
-        ...action.payload.names,
-        title: state.title,
-        icon: state.icon,
-        info: state.info,
-        profit: state.profit,
-        update: state.update,
-        id: state.id,
-      };
+      const index = state.findIndex(
+        (item) => item.id === action.payload.id
+      );
+      const newList = Array.from(state);
+      newList[index] = action.payload.names;
+      return newList;
     default:
       return state;
   }
@@ -49,10 +46,6 @@ export const ThemeProvider = (props) => {
   const themeToggler = () => {
     if (!toggleState) {
       setToggleState(true);
-      localStorage.setItem(
-        "toggleState",
-        JSON.stringify(toggleState)
-      );
       document.body.classList.add("dark");
     } else {
       setToggleState(false);
@@ -63,8 +56,13 @@ export const ThemeProvider = (props) => {
     useState(initialState);
   const [modal, setModal] = useState(false);
   const [checked, setChecked] = useState(false);
+  4;
   const handleOpen = () => setModal(true);
-  const handleClose = () => setModal(false);
+  const handleClose = () => {
+    setModal(false);
+    setNames(initialState);
+    setChecked(false);
+  };
   const handleSubmit = (e) => e.preventDefault();
   const handleChange = (e) => {
     const { value, name } = e.target;
@@ -77,21 +75,39 @@ export const ThemeProvider = (props) => {
     });
     setNames(initialState);
     setModal(false);
-    localStorage.setItem(
-      "state",
-      JSON.stringify([...state, names])
-    );
     console.log(names, state);
   };
-  const handleDelete = () => {
+  const handleDelete = (id) => {
     dispatch({
       type: "delete",
-      payload: { id: state.id },
+      payload: { id: names.id },
     });
+    handleClose();
   };
-  const handleChecked = () => {
+  const handleChecked = (key) => {
     setChecked(true);
     setModal(true);
+    const index = state.findIndex(
+      (item) => item.id === key
+    );
+    const list = state[index];
+    setNames({
+      title: list.title,
+      icon: list.icon,
+      info: list.info,
+      profit: list.profit,
+      update: list.update,
+      id: list.id,
+    });
+    console.log({ list: list });
+  };
+  const handleSave = () => {
+    console.log({ names: names });
+    dispatch({
+      type: "edit",
+      payload: { id: names.id, names: names },
+    });
+    handleClose();
   };
   useEffect(() => {
     if (JSON.parse(localStorage.getItem("val"))) {
@@ -102,15 +118,17 @@ export const ThemeProvider = (props) => {
         )
       );
     }
-  }, []);
-  useEffect(() => {
     if (
-      JSON.parse(localStorage.getItem("state"))
+      JSON.parse(
+        localStorage.getItem("toggleState")
+      )
     ) {
-      initialStateList = JSON.parse(
-        localStorage.getItem("state") || []
+      setToggleState(
+        JSON.parse(
+          localStorage.getItem("toggleState") ||
+            false
+        )
       );
-      return initialStateList;
     }
   }, []);
 
@@ -121,15 +139,13 @@ export const ThemeProvider = (props) => {
         JSON.stringify(val)
       );
     }
-  }, [val]);
-  useEffect(() => {
-    if (state !== []) {
+    if (toggleState !== false) {
       localStorage.setItem(
-        "state",
-        JSON.stringify(state)
+        "val",
+        JSON.stringify(toggleState)
       );
     }
-  }, [state]);
+  }, [val, toggleState]);
 
   const stateActions = {
     themeToggler,
@@ -140,6 +156,8 @@ export const ThemeProvider = (props) => {
     handleChange,
     handleClick,
     handleChecked,
+    handleDelete,
+    handleSave,
   };
   return (
     <ThemeContext.Provider
@@ -148,7 +166,8 @@ export const ThemeProvider = (props) => {
         toggleState,
         val,
         modal,
-        names, checked,
+        names,
+        checked,
         ...stateActions,
       }}
     >
