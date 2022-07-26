@@ -16,17 +16,17 @@ import React, {
   useContext,
 } from "react";
 import { Modal } from "@mui/material";
-import { format } from "date-fns";
+//import { format } from "date-fns";
 
 import { syn } from "./orders.js";
 
 export default function Home() {
   const { toggleState, modal, handleClose } =
     useContext(ThemeContext);
-  const defaultDate = format(
-    new Date(),
-    "MM/dd/yyyy"
-  );
+  // const defaultDate = format(
+  //   new Date(),
+  //   "MM/dd/yyyy"
+  // );
   return (
     <div className={styles.container}>
       <Head>
@@ -39,17 +39,6 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Top click={click} setClick={setClick} />
-      <aside
-        className={styles.aside}
-        style={{ display: click ? "block" : "" }}
-      >
-        <SideBar
-          click={click}
-          val={val}
-          handleClick={handleClick}
-        />
-      </aside> */}
       <main className={styles}>
         <h1>Dashboard {syn}</h1>
         <div
@@ -59,7 +48,7 @@ export default function Home() {
               : styles.date
           }
         >
-          <input type="date" value={dateVal} />
+          <input type="date"/>
         </div>
 
         <Modal

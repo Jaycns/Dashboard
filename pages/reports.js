@@ -4,15 +4,10 @@ import styles from "../styles/frag.module.scss";
 import { syn } from "./orders.js";
 import ThemeContext from "../context/context";
 import Transaction from "../exchange/transactions";
-import { defaultDate } from "./index";
 
 function Reports() {
   const { toggleState } =
     useContext(ThemeContext);
-  // const defaultDate = format(
-  //   new Date(),
-  //   "MM/dd/yyyy"
-  // );
   return (
     <main className={`${styles.frag}`}>
       <h1>Reports {syn}</h1>
@@ -24,10 +19,7 @@ function Reports() {
               : styles.date
           }
         >
-          <input
-            type="date"
-            defaultValue={defaultDate}
-          />
+          <input type="date" />
         </div>
         <Transaction />
         <Canvas />
