@@ -13,6 +13,7 @@ function Analystics() {
     state,
     names,
     handleChecked,
+    handleClick,
   } = useContext(ThemeContext);
   return (
     <div
@@ -84,7 +85,9 @@ function Analystics() {
           <div
             key={items.id}
             className={`${styles.item} ${styles.customers}`}
-            onClick={() => handleChecked(items.id)}
+            onClick={() =>
+              handleChecked(items.id)
+            }
           >
             <div className={styles.icon}>
               {items.icon}
@@ -107,7 +110,7 @@ function Analystics() {
       <div
         onClick={
           val === "Add Products"
-            ? null
+            ? handleClick
             : handleOpen
         }
         className={`${styles.item} ${styles.add}`}
