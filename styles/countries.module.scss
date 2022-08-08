@@ -1,0 +1,21 @@
+@use './props.scss' as *;
+
+.country{
+    width: 20vw;
+    height: 60vh;
+    background-color: #000000e8;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00000085;
+    &:hover{
+       box-shadow: 0 0 10px #000000f1; 
+    }
+
+}
+.county{
+background-color: #000;
+width: 100%;
+height: 20vh;
+border-radius: 10px;
+
+
+}

@@ -10,7 +10,7 @@ body {
   height: 100vh;
   font-size: 100%;
   background: $color-background;
-  overflow: none;
+  overflow-x: hidden;
   user-select: none;
   color: $color-dark;
   transition: 0.3s ease-in-out;

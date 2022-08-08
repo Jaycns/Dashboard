@@ -2,6 +2,7 @@
 @import "./myModal.module.scss";
 .frag {
   width: 90rem;
+  margin-bottom: 5rem;
   @media screen and (max-width: 1800px) {
     width: 75rem;
   }
@@ -31,12 +32,12 @@
   }
   input {
     background: $color-light;
-    padding: $padding-2 $card-padding;
+    padding: 1.5rem $card-padding;
     color: $color-dark;
     width: 100%;
     outline: none;
     border: none;
-    font-size: 16px;
+    font-size: 1.4rem;
     border-radius: $border-radius-1;
     @media screen and (max-width: 768px) {
       font-size: 2.2rem;
@@ -52,7 +53,7 @@
     width: 100%;
     padding: $padding-2;
     font-family: Poppins;
-    font-size: 18px;
+    font-size: 1.4rem;
     color: $color-dark;
   }
 }

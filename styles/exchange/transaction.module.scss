@@ -62,4 +62,20 @@
       align-items: center;
     }
   }
+  @media screen and (max-width: 768px) {
+    h4 {
+      font-size: 1.1rem;
+    }
+    p{
+      font-size: 1rem;
+    }
+    .details{
+      p{
+        font-size: 1rem;
+      }
+      .small {
+        font-size: 2rem!important;
+      }
+    }
+  }
 }

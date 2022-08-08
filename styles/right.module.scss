@@ -2,6 +2,9 @@
 .right {
   margin-top: 1.4rem;
   @media screen and (max-width: 768px) {
+    p {
+      font-size: 1.2rem;
+    }
   }
 
   .recent {
@@ -27,6 +30,9 @@
       }
       @media screen and (max-width: 768px) {
         border-radius: 1rem;
+        .small {
+          font-size: 2rem;
+        }
       }
     }
   }

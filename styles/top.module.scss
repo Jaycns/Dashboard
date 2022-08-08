@@ -33,7 +33,7 @@
     align-items: center;
     gap: 1rem;
     color: $color-dark;
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0 10rem;
     input {
       width: 100%;
@@ -50,6 +50,9 @@
       input {
         background: transparent;
         font-size: 2.2rem;
+        &::placeholder {
+          visibility: hidden;
+        }
       }
     }
   }

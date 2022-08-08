@@ -19,7 +19,10 @@ function Reports() {
               : styles.date
           }
         >
-          <input type="date" />
+          <input
+            type="date"
+            style={{ fontSize: "20px", padding: ".7rem 1.5rem"}}
+          />
         </div>
         <Transaction />
         <Canvas />
