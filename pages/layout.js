@@ -6,10 +6,12 @@ import Top from "../components/tops";
 import SideBar from "../components/sidebars";
 import styles from "../styles/layout.module.scss";
 import ThemeContext from "../context/context";
+import ProductModal from "../components/myModal";
+import { Modal } from "@mui/material";
 
 function Layout({ children }) {
   const [click, setClick] = useState(false);
-  const { toggleState } =
+  const { toggleState, modal, handleClose } =
     useContext(ThemeContext);
   return (
     <div className={styles.container}>
@@ -31,6 +33,16 @@ function Layout({ children }) {
           setClick={setClick}
         />
       </aside>
+      <Modal
+        open={modal}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <div>
+          <ProductModal />
+        </div>
+      </Modal>
       <main className={styles.mainer}>
         {children}
       </main>
