@@ -10,7 +10,7 @@
   margin-left: 1.4rem;
   display: none;
   @media screen and (max-width: 650px) {
-     margin-left: 1rem;
+    margin-left: 1rem;
   }
 }
 .logo {
@@ -21,7 +21,7 @@
     color: $color-danger;
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1300px) {
     margin-left: 1rem;
     h2 {
       display: none;

@@ -2,7 +2,7 @@
 
 .container {
   display: flex;
-  margin:0 0% 2% 0%;
+  margin: 0 0% 2% 0%;
   gap: 1.8rem;
 
   // .dark {
@@ -14,7 +14,7 @@
   //   $box-shadow: 0 2rem 3rem $color-light;
   // }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1300px) {
     width: 94%;
   }
   @media screen and (max-width: 768px) {
@@ -43,7 +43,6 @@
         left: 0;
       }
     }
-    
   }
 }
 

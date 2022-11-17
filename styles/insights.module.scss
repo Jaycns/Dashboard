@@ -22,7 +22,6 @@
     }
     @media screen and (max-width: 768px) {
       border-radius: 1rem;
-    
     }
   }
   .expenses {
@@ -92,13 +91,13 @@
     color: $color-info-dark;
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1300px) {
     grid-template-columns: 1fr;
     gap: 0;
   }
 }
-.insights.dark{
-   & > div {
+.insights.dark {
+  & > div {
     background: #202528;
-   }
+  }
 }

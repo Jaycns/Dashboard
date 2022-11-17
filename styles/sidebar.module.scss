@@ -71,7 +71,7 @@
   h3 {
     font-weight: 500;
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1300px) {
     h3 {
       display: none;
     }
@@ -110,11 +110,11 @@
       cursor: pointer;
     }
   }
-   @media screen and (max-width: 400px) {
+  @media screen and (max-width: 400px) {
     a {
       &:last-child {
         bottom: -5rem;
       }
     }
-   }
+  }
 }
